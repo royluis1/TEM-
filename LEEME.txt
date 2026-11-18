@@ -1,11 +1,1 @@
-TEM - sitio de varias paginas (sin build, se sube tal cual)
-1) Subir el CONTENIDO de esta carpeta a tu repo de Vercel (index.html debe quedar en la raiz).
-2) Supabase > SQL Editor: pegar y ejecutar supabase/schema.sql.
-3) Supabase > Settings > API: copiar "Project URL" y "anon public key" en assets/js/config.js.
-4) Supabase > Authentication > URL Configuration:
-   Site URL = https://tem-taupe.vercel.app
-   Redirect URLs = https://tem-taupe.vercel.app/ingresar.html
-5) Supabase > Authentication > Providers > Email: dejar "Confirm email" ACTIVADO (verifica el correo).
-6) Correo: el servicio que trae Supabase tiene limites muy bajos y no sirve para usuarios reales.
-   Configura un SMTP propio en Authentication > SMTP Settings (por ejemplo Resend o Brevo).
-7) Vercel > volver a desplegar.
+todo agregado...
