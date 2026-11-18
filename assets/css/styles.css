@@ -121,3 +121,12 @@ th{background:var(--brand);color:#fff}.score{font-weight:800;white-space:nowrap;
  .has-sub>button::after{transition:none}
  .btn:active,.tile:active,.tab:active,.chip:active,.opt:active{transform:none}
 }
+/* submenú de Cuidate Online dentro de Cursos */
+.sub-btn{position:relative;display:block;width:100%;padding:12px 40px 12px 14px;border:0;border-radius:12px;background:none;color:var(--text);text-align:left;cursor:pointer;transition:background-color 150ms ease}
+.sub-btn b{display:block}.sub-btn span{display:block;color:var(--muted);font-size:.85rem;font-weight:500}
+.sub-btn::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;border:solid currentColor;border-width:0 2px 2px 0;transform:translateY(-70%) rotate(45deg);transition:transform 200ms var(--ease-out)}
+.sub-btn[aria-expanded="true"]::after{transform:translateY(-30%) rotate(-135deg)}
+.sub-btn[aria-expanded="true"]{background:var(--goodbg)}
+.sub-list{margin:2px 0 6px 16px;padding-left:8px;border-left:3px solid var(--accent)}
+@media (hover:hover) and (pointer:fine){.sub-btn:hover{background:var(--goodbg)}}
+@media (prefers-reduced-motion:reduce){.sub-btn::after{transition:none}}

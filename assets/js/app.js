@@ -29,10 +29,8 @@ var tableHtml=TEM.tableHtml;
   function finish(){
     var head='<p class="meta">Tu resultado</p><p class="score-big">'+score+'<span>/'+Q.length+'</span></p>';
     TEM.getUser().then(function(u){
-      var card;
-      if(!TEM.ready)card='<div class="card" id="sv"><h3>Guardá tu resultado</h3><label for="nm">Tu nombre y apellido</label><input id="nm" type="text" maxlength="40" autocomplete="name" value="'+TEM.esc(u?u.name:"")+'"><p class="meta">Por ahora se guarda solo en este dispositivo.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>';
-      else if(u)card='<div class="card" id="sv"><h3>Guardá tu resultado, '+TEM.esc(TEM.abbr(u.name))+'</h3><p class="meta">Va a aparecer en la tabla de concursantes con tu nombre y la inicial de tu apellido.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>';
-      else card='<div class="card"><h3>Ingresá para guardar tu resultado</h3><p class="meta">Con tu cuenta, tu puntaje queda en la tabla de concursantes.</p><a class="btn" href="'+root+'ingresar.html">Ingresar o crear cuenta</a></div>';
+      var card=u?'<div class="card" id="sv"><h3>Guardá tu resultado, '+TEM.esc(TEM.abbr(u.name))+'</h3><p class="meta">Queda guardado en tu cuenta y lo ves en “Ingresar”.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>'
+        :'<div class="card"><h3>Ingresá para guardar tu resultado</h3><p class="meta">Con tu cuenta tu puntaje queda guardado.</p><a class="btn" href="'+root+'ingresar.html">Ingresar o crear cuenta</a></div>';
       box.innerHTML=head+card+'<p><button type="button" class="btn alt" id="again">Volver a intentarlo</button></p>';
     });
   }
@@ -48,27 +46,12 @@ var tableHtml=TEM.tableHtml;
     }else if(b.id==="nx"){if(i<Q.length-1){i++;render();}else finish();}
     else if(b.id==="again"){i=0;score=0;render();}
     else if(b.id==="savebtn"){
-      var nm=document.getElementById("nm"),name=nm?nm.value.trim():"";
-      if(nm&&!name){nm.focus();return;}
       b.disabled=true;var sc=score;
-      TEM.save(k,sc,Q.length,name).then(function(w){
-        document.getElementById("sv").innerHTML='<h3>¡Listo!</h3><p>Tu resultado '+sc+'/'+Q.length+(w==="shared"?' quedó guardado en la tabla general.':' quedó guardado en este dispositivo.')+'</p><a class="btn" href="'+root+'tabla.html">🏆 Ver tabla de concursantes</a>';
+      TEM.save(k,sc,Q.length).then(function(w){
+        document.getElementById("sv").innerHTML=w==="ok"?'<h3>¡Listo!</h3><p>Tu resultado '+sc+'/'+Q.length+' quedó guardado en tu cuenta.</p><a class="btn" href="'+root+'ingresar.html">Ver mis resultados</a>':'<h3>No se pudo guardar</h3><p>Probá de nuevo en un momento.</p><button type="button" class="btn" id="savebtn">Reintentar</button>';
       });
     }
   });
   render();
-})();
-/* tabla de concursantes */
-(function(){
-  var box=document.getElementById("tabla");if(!box)return;var data=null,f="all";
-  function draw(){
-    var rows=data.rows.filter(function(r){return f==="all"||r.k===f;});
-    box.innerHTML='<div class="chips" role="group" aria-label="Filtrar por nivel">'+[["all","Todos"],["nivel-1","Nivel 1"],["nivel-2","Nivel 2"],["nivel-3","Nivel 3"]].map(function(c){return '<button type="button" class="chip" data-f="'+c[0]+'" aria-pressed="'+(f===c[0])+'">'+c[1]+'</button>';}).join("")+'</div>'+
-      '<p class="meta">'+(data.shared?"Resultados de todas las personas que rindieron.":(data.failed?"No se pudo cargar la tabla general. Se muestran los resultados de este dispositivo.":"Resultados guardados en este dispositivo."))+'</p>'+
-      (rows.length?tableHtml(rows):'<div class="card">Todavía no hay resultados. ¡Sé la primera persona en rendir la evaluación!</div>');
-  }
-  box.addEventListener("click",function(e){var b=e.target.closest("[data-f]");if(b){f=b.dataset.f;draw();}});
-  box.innerHTML='<p class="meta">Cargando…</p>';
-  TEM.rows().then(function(d){data=d;draw();});
 })();
 })();
