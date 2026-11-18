@@ -1,9 +1,5 @@
 (function(){
-function tableHtml(rows){
-  rows=rows.slice().sort(function(a,b){return (b.s/b.t)-(a.s/a.t)||b.s-a.s||a.ts-b.ts;});
-  return '<div class="scroll"><table><caption class="sr-only">Resultados</caption><thead><tr><th>#</th><th>Nombre</th><th>Nivel</th><th>Puntaje</th></tr></thead><tbody>'+
-  rows.map(function(r,i){return '<tr><td>'+(i+1)+'</td><td>'+TEM.esc(r.name)+'</td><td>'+(TEM.LEVELS[r.k]||"")+'</td><td class="score">'+r.s+'/'+r.t+'</td></tr>';}).join("")+'</tbody></table></div>';
-}
+var tableHtml=TEM.tableHtml;
 /* pestañas */
 (function(){
   var root=document.querySelector("[data-tabs]");if(!root)return;
@@ -31,10 +27,14 @@ function tableHtml(rows){
     document.getElementById("bar").style.transform="scaleX("+(i/Q.length)+")";
   }
   function finish(){
-    var u=TEM.user();
-    box.innerHTML='<p class="meta">Tu resultado</p><p class="score-big">'+score+'<span>/'+Q.length+'</span></p>'+
-      '<div class="card" id="sv"><h3>Guardá tu resultado en la tabla de concursantes</h3><label for="nm">Tu nombre y apellido</label><input id="nm" type="text" maxlength="40" autocomplete="name" value="'+TEM.esc(u?u.name:"")+'"><p class="meta">En la tabla se verá tu nombre y la inicial de tu apellido.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>'+
-      '<p><button type="button" class="btn alt" id="again">Volver a intentarlo</button></p>';
+    var head='<p class="meta">Tu resultado</p><p class="score-big">'+score+'<span>/'+Q.length+'</span></p>';
+    TEM.getUser().then(function(u){
+      var card;
+      if(!TEM.ready)card='<div class="card" id="sv"><h3>Guardá tu resultado</h3><label for="nm">Tu nombre y apellido</label><input id="nm" type="text" maxlength="40" autocomplete="name" value="'+TEM.esc(u?u.name:"")+'"><p class="meta">Por ahora se guarda solo en este dispositivo.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>';
+      else if(u)card='<div class="card" id="sv"><h3>Guardá tu resultado, '+TEM.esc(TEM.abbr(u.name))+'</h3><p class="meta">Va a aparecer en la tabla de concursantes con tu nombre y la inicial de tu apellido.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>';
+      else card='<div class="card"><h3>Ingresá para guardar tu resultado</h3><p class="meta">Con tu cuenta, tu puntaje queda en la tabla de concursantes.</p><a class="btn" href="'+root+'ingresar.html">Ingresar o crear cuenta</a></div>';
+      box.innerHTML=head+card+'<p><button type="button" class="btn alt" id="again">Volver a intentarlo</button></p>';
+    });
   }
   box.addEventListener("click",function(e){
     var b=e.target.closest("button");if(!b)return;
@@ -48,10 +48,11 @@ function tableHtml(rows){
     }else if(b.id==="nx"){if(i<Q.length-1){i++;render();}else finish();}
     else if(b.id==="again"){i=0;score=0;render();}
     else if(b.id==="savebtn"){
-      var nm=document.getElementById("nm"),name=nm.value.trim();if(!name){nm.focus();return;}
+      var nm=document.getElementById("nm"),name=nm?nm.value.trim():"";
+      if(nm&&!name){nm.focus();return;}
       b.disabled=true;var sc=score;
-      TEM.save(name,k,sc,Q.length).then(function(w){
-        document.getElementById("sv").innerHTML='<h3>¡Listo, '+TEM.esc(name)+'!</h3><p>Tu resultado '+sc+'/'+Q.length+' quedó guardado '+(w==="shared"?"en la tabla general.":"en este dispositivo.")+'</p><a class="btn" href="'+root+'tabla.html">🏆 Ver tabla de concursantes</a>';
+      TEM.save(k,sc,Q.length,name).then(function(w){
+        document.getElementById("sv").innerHTML='<h3>¡Listo!</h3><p>Tu resultado '+sc+'/'+Q.length+(w==="shared"?' quedó guardado en la tabla general.':' quedó guardado en este dispositivo.')+'</p><a class="btn" href="'+root+'tabla.html">🏆 Ver tabla de concursantes</a>';
       });
     }
   });
@@ -69,22 +70,5 @@ function tableHtml(rows){
   box.addEventListener("click",function(e){var b=e.target.closest("[data-f]");if(b){f=b.dataset.f;draw();}});
   box.innerHTML='<p class="meta">Cargando…</p>';
   TEM.rows().then(function(d){data=d;draw();});
-})();
-/* ingresar */
-(function(){
-  var box=document.getElementById("login");if(!box)return;
-  function draw(){
-    var u=TEM.user();
-    if(u){
-      box.innerHTML='<h1>👤 Hola, '+TEM.esc(u.name)+'</h1><p class="lead">Tus resultados en este dispositivo:</p><div id="mine"></div><div class="actions"><a class="btn" href="'+box.dataset.root+'cursos/index.html">Ir a los cursos</a><button class="btn alt" type="button" id="logout">Cerrar sesión</button></div>';
-      var mine=TEM.localRows().filter(function(r){return r.name===TEM.abbr(u.name);});
-      document.getElementById("mine").innerHTML=mine.length?tableHtml(mine):'<div class="card">Todavía no rendiste ninguna evaluación.</div>';
-      document.getElementById("logout").onclick=function(){TEM.logout();TEM.nav();draw();};
-    }else{
-      box.innerHTML='<h1>Ingresar</h1><form class="card" id="lf"><label for="lu">Nombre y apellido</label><input id="lu" required maxlength="40" autocomplete="name"><label for="le">Correo (opcional)</label><input id="le" type="email" inputmode="email" maxlength="80" autocomplete="email"><p class="meta">Por ahora tus datos se guardan solo en este dispositivo.</p><button class="btn" type="submit">Ingresar</button></form>';
-      document.getElementById("lf").onsubmit=function(e){e.preventDefault();var n=document.getElementById("lu").value.trim();if(!n)return;TEM.login(n,document.getElementById("le").value.trim());TEM.nav();draw();};
-    }
-  }
-  draw();
 })();
 })();

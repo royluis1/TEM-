@@ -1,0 +1,6 @@
+TEM - sitio de varias paginas (sin build, se sube tal cual)
+1) Subir el CONTENIDO de esta carpeta a tu repo de Vercel (index.html debe quedar en la raiz).
+2) Supabase > SQL Editor: pegar y ejecutar supabase/schema.sql.
+3) Supabase > Settings > API: copiar "Project URL" y "anon public key" en assets/js/config.js.
+4) Supabase > Authentication > Providers > Email: para eventos presenciales conviene desactivar "Confirm email".
+5) Vercel > volver a desplegar. Sin los datos del paso 3 el sitio funciona en modo local.
