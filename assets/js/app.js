@@ -19,7 +19,19 @@ var tableHtml=TEM.tableHtml;
   var raw=JSON.parse(document.getElementById("quiz-data").textContent),k=box.dataset.level,root=box.dataset.root,i=0,score=0,done=false,detail=[];
   var ids=raw.map(function(q,n){return Array.isArray(q)?k+":"+(n+1):String(q.id);});
   var Q=raw.map(function(q){return Array.isArray(q)?q:[q.t,q.c,q.e,q.o];});
-  function shuffle(n){var a=[];for(var j=0;j<n;j++)a.push(j);return a.sort(function(){return Math.random()-.5;});}
+
+function shuffle(n){
+    var a=[];
+    for(var j=0;j<n;j++)a.push(j);
+    for(var idx=a.length-1;idx>0;idx--){
+      var r=Math.floor(Math.random()*(idx+1));
+      var tmp=a[idx];
+      a[idx]=a[r];
+      a[r]=tmp;
+    }
+    return a;
+  }
+  
   function render(){
     done=false;var q=Q[i];
     var opts=q[3]?shuffle(q[3].length).map(function(o){return [o,q[3][o]];}):[[1,"Es estafa"],[0,"Parece seguro"]];
