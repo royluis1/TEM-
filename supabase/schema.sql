@@ -1,8 +1,3 @@
--- TEM · Backend en Supabase
--- Pegar completo en Supabase > SQL Editor > Run.
--- Se puede volver a correr sin romper nada (no borra datos).
-
--- 1) Perfiles: el nombre de cada persona. Cada uno ve y edita solo el suyo.
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   full_name text not null default '',
