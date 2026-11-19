@@ -1,3 +1,18 @@
+// Registro del Service Worker (PWA)
+if ("serviceWorker" in navigator) {
+  var swUrl = new URL("../../sw.js", document.currentScript.src).href;
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register(swUrl)
+      .then(function () {
+        console.log("Service Worker registrado");
+      })
+      .catch(function (err) {
+        console.error("Error al registrar SW:", err);
+      });
+  });
+}
+
 (function(){
 var nav=document.getElementById("site-nav"),burger=document.getElementById("burger");
 TEM.nav=function(){TEM.getUser().then(function(u){var l=document.getElementById("login-link");if(!l)return;l.textContent=u?"👤 "+TEM.abbr(u.name):"Ingresar";l.setAttribute("href",l.getAttribute("href").replace(/(ingresar|perfil)\.html$/,u?"perfil.html":"ingresar.html"));});};

@@ -42,10 +42,31 @@ S.mine=function(){
   if(!sb)return Promise.resolve([]);
   return sb.from("resultados").select("nivel,puntaje,total,detalle,created_at").order("created_at",{ascending:false}).then(function(r){return r.data||[];});
 };
+
+
+
 S.mineHtml=function(rows){
-  return '<div class="scroll"><table><caption class="sr-only">Mis resultados</caption><thead><tr><th>Nivel</th><th>Puntaje</th><th>Fecha</th></tr></thead><tbody>'+
-  rows.map(function(r){return '<tr><td>'+(S.LEVELS[r.nivel]||"")+'</td><td class="score">'+r.puntaje+'/'+r.total+'</td><td>'+new Date(r.created_at).toLocaleDateString("es-AR")+'</td></tr>';}).join("")+'</tbody></table></div>';
+  var MIN_APROBADO=0.7; // 70% para aprobar (cambialo a 0.6 si aprueban con 60%)
+  return '<ul class="progreso-lista">'+Object.keys(S.LEVELS).map(function(k){
+    var intentos=rows.filter(function(r){return r.nivel===k;});
+    var estado="Pendiente",clase="pendiente",textoPuntaje="Sin rendir";
+    if(intentos.length){
+      var mejor=intentos.reduce(function(a,b){
+        var ra=a.total?a.puntaje/a.total:0,rb=b.total?b.puntaje/b.total:0;
+        return rb>ra?b:a;
+      });
+      var ok=mejor.total>0&&(mejor.puntaje/mejor.total)>=MIN_APROBADO;
+      estado=ok?"Aprobado":"Rendido";
+      clase=ok?"aprobado":"rendido";
+      textoPuntaje="Mejor puntaje: "+mejor.puntaje+"/"+mejor.total;
+    }
+    return '<li class="progreso-item"><div><b>'+S.esc(S.LEVELS[k])+'</b><span class="meta">'+textoPuntaje+'</span></div><span class="badge badge-'+clase+'">'+estado+'</span></li>';
+  }).join("")+'</ul>';
 };
+
+
+
+
 /* grupos y perfil */
 S.groups=function(){if(!sb)return Promise.resolve([]);return sb.from("grupos").select("id,nombre").order("nombre").then(function(r){return r.data||[];});};
 S.profile=function(u){if(!sb)return Promise.resolve(null);return sb.from("profiles").select("full_name,grupo_id").eq("id",u.id).maybeSingle().then(function(r){return r.data;});};

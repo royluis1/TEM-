@@ -18,7 +18,9 @@ function render(u,p,gs,rows){
   box.innerHTML='<h1>👤 Mi perfil</h1><p class="lead">Estos datos solo los ves vos.</p>'+
   '<form class="card" id="pf"><h3>Mis datos</h3><label for="pn">Nombre y apellido</label><input id="pn" required maxlength="40" autocomplete="name" value="'+TEM.esc(p.full_name||u.name)+'"><label for="pe">Correo</label><input id="pe" readonly value="'+TEM.esc(u.email)+'"><label for="pg">Grupo</label><select id="pg">'+gopts+'</select><div id="m1" aria-live="polite"></div><button class="btn" type="submit">Guardar cambios</button></form>'+
   '<form class="card" id="pw"><h3>Cambiar contraseña</h3><label for="np">Nueva contraseña</label><input id="np" type="password" required minlength="8" autocomplete="new-password"><p class="meta">Mínimo 8 caracteres.</p><div id="m2" aria-live="polite"></div><button class="btn" type="submit">Cambiar contraseña</button></form>'+
-  '<div class="card"><h3>Mis resultados</h3>'+(rows.length?TEM.mineHtml(rows)+'<p><button class="btn alt" type="button" id="dl">Descargar mis resultados (CSV)</button></p>':'<p style="margin:0">Todavía no rendiste ninguna evaluación.</p>')+'</div>'+
+
+'<div class="card"><h3>Mi progreso</h3>'+TEM.mineHtml(rows)+(rows.length?'<p><button class="btn alt" type="button" id="dl">Descargar mis resultados (CSV)</button></p>':'')+'</div>'+
+
   '<div class="card"><h3>Borrar mi cuenta</h3><p>Se elimina tu cuenta y todos tus resultados. No se puede deshacer.</p><button class="btn danger" type="button" id="del">Borrar mi cuenta</button></div>'+
   '<div class="actions"><button class="btn alt" type="button" id="out">Cerrar sesión</button></div><p class="meta"><a href="'+root+'privacidad.html">Política de privacidad</a></p>'+
   '<dialog id="dlg" aria-labelledby="dt"><h3 id="dt">¿Borrar tu cuenta?</h3><p>Se van a eliminar tu cuenta y todos tus resultados. No se puede deshacer.</p><div id="m3" aria-live="polite"></div><div class="actions" style="margin-bottom:0"><button class="btn alt" type="button" id="no" autofocus>Cancelar</button><button class="btn danger" type="button" id="yes">Sí, borrar mi cuenta</button></div></dialog>';
