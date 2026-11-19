@@ -22,8 +22,12 @@ var tableHtml=TEM.tableHtml;
   function shuffle(n){var a=[];for(var j=0;j<n;j++)a.push(j);return a.sort(function(){return Math.random()-.5;});}
   function render(){
     done=false;var q=Q[i];
-    var opts=q[3]?shuffle(q[3].length).map(function(o){return [o,q[3][o]];}):[[1,"Es estafa"],[0,"Parece seguro"]];
-    box.innerHTML='<div class="bar" aria-hidden="true"><span id="bar"></span></div><p class="meta">Pregunta '+(i+1)+' de '+Q.length+'</p><p class="q">'+TEM.esc(q[0])+'</p><div class="opts">'+
+    var opts=q[3]?shuffle(q[3].length).map(function(o){return [o,q[3][o]];}):[[1,"Es estafa"],[0,"No es estafa"]];
+    /* ====== AUDIO: si la pregunta trae un 5º dato (q[4]) es el nombre del archivo ======
+       dentro de la carpeta /audios. Se arma el botón "Reproducir audio" + el <audio>. */
+    var audioHtml=q[4]?'<div class="audioq"><button type="button" class="btn alt audio-play">▶ Reproducir audio</button><audio class="audio-el" preload="none" src="'+root+'audios/'+TEM.esc(q[4])+'"></audio></div>':'';
+    /* ================================================================================ */
+    box.innerHTML='<div class="bar" aria-hidden="true"><span id="bar"></span></div><p class="meta">Pregunta '+(i+1)+' de '+Q.length+'</p><p class="q">'+TEM.esc(q[0])+'</p>'+audioHtml+'<div class="opts">'+
       opts.map(function(o,p){return '<button type="button" class="opt" data-a="'+o[0]+'">'+(q[3]?"ABC".charAt(p)+") ":"")+TEM.esc(o[1])+'</button>';}).join("")+
       '</div><div id="fb" aria-live="polite"></div><p><button type="button" class="btn" id="nx" hidden></button></p>';
     document.getElementById("bar").style.transform="scaleX("+(i/Q.length)+")";
@@ -38,6 +42,15 @@ var tableHtml=TEM.tableHtml;
   }
   box.addEventListener("click",function(e){
     var b=e.target.closest("button");if(!b)return;
+    /* ====== AUDIO: reproducir / pausar el audio de la pregunta actual ====== */
+    if(b.classList.contains("audio-play")){
+      var au=b.parentElement.querySelector("audio");
+      if(au.paused){au.currentTime=0;au.play();b.textContent="⏸ Pausar audio";}
+      else{au.pause();b.textContent="▶ Reproducir audio";}
+      au.onended=function(){b.textContent="▶ Reproducir audio";};
+      return;
+    }
+    /* ========================================================================= */
     if(b.classList.contains("opt")&&!done){
       done=true;var q=Q[i],ok=Number(b.dataset.a)===q[1];if(ok)score++;detail.push({id:ids[i],ok:ok});
       [].forEach.call(box.querySelectorAll(".opt"),function(o){o.disabled=true;if(Number(o.dataset.a)===q[1])o.classList.add("correct");});
