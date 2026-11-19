@@ -1,0 +1,8 @@
+ACTUALIZACIÓN 2 — solo archivos nuevos o modificados (NO incluye config.js: no pises el tuyo)
+
+1) Supabase > SQL Editor: ejecutar supabase/migracion-2.sql (una sola vez).
+2) Crear los grupos (ejemplo comentado al principio del SQL).
+3) Dar rol docente a quien corresponda (último bloque del SQL).
+4) Copiar estos archivos sobre los del repo, respetando las carpetas, y hacer commit.
+5) Vercel despliega solo. Recargar con Ctrl+Shift+R.
+6) docs/integracion.md es para pasarle a Persona 2 y Persona 3.

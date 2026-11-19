@@ -1,6 +1,6 @@
 (function(){
 var nav=document.getElementById("site-nav"),burger=document.getElementById("burger");
-TEM.nav=function(){TEM.getUser().then(function(u){var l=document.getElementById("login-link");if(l)l.textContent=u?"👤 "+TEM.abbr(u.name):"Ingresar";});};
+TEM.nav=function(){TEM.getUser().then(function(u){var l=document.getElementById("login-link");if(!l)return;l.textContent=u?"👤 "+TEM.abbr(u.name):"Ingresar";l.setAttribute("href",l.getAttribute("href").replace(/(ingresar|perfil)\.html$/,u?"perfil.html":"ingresar.html"));});};
 TEM.nav();
 if(!nav)return;
 var items=[].slice.call(nav.querySelectorAll(".has-sub"));

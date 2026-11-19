@@ -16,7 +16,9 @@ var tableHtml=TEM.tableHtml;
 /* evaluación */
 (function(){
   var box=document.getElementById("quiz");if(!box)return;
-  var Q=JSON.parse(document.getElementById("quiz-data").textContent),k=box.dataset.level,root=box.dataset.root,i=0,score=0,done=false;
+  var raw=JSON.parse(document.getElementById("quiz-data").textContent),k=box.dataset.level,root=box.dataset.root,i=0,score=0,done=false,detail=[];
+  var ids=raw.map(function(q,n){return Array.isArray(q)?k+":"+(n+1):String(q.id);});
+  var Q=raw.map(function(q){return Array.isArray(q)?q:[q.t,q.c,q.e,q.o];});
   function shuffle(n){var a=[];for(var j=0;j<n;j++)a.push(j);return a.sort(function(){return Math.random()-.5;});}
   function render(){
     done=false;var q=Q[i];
@@ -29,7 +31,7 @@ var tableHtml=TEM.tableHtml;
   function finish(){
     var head='<p class="meta">Tu resultado</p><p class="score-big">'+score+'<span>/'+Q.length+'</span></p>';
     TEM.getUser().then(function(u){
-      var card=u?'<div class="card" id="sv"><h3>Guardá tu resultado, '+TEM.esc(TEM.abbr(u.name))+'</h3><p class="meta">Queda guardado en tu cuenta y lo ves en “Ingresar”.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>'
+      var card=u?'<div class="card" id="sv"><h3>Guardá tu resultado, '+TEM.esc(TEM.abbr(u.name))+'</h3><p class="meta">Queda guardado en tu cuenta y lo ves en “Mi perfil”.</p><button type="button" class="btn" id="savebtn">Guardar mi resultado</button></div>'
         :'<div class="card"><h3>Ingresá para guardar tu resultado</h3><p class="meta">Con tu cuenta tu puntaje queda guardado.</p><a class="btn" href="'+root+'ingresar.html">Ingresar o crear cuenta</a></div>';
       box.innerHTML=head+card+'<p><button type="button" class="btn alt" id="again">Volver a intentarlo</button></p>';
     });
@@ -37,18 +39,18 @@ var tableHtml=TEM.tableHtml;
   box.addEventListener("click",function(e){
     var b=e.target.closest("button");if(!b)return;
     if(b.classList.contains("opt")&&!done){
-      done=true;var q=Q[i],ok=Number(b.dataset.a)===q[1];if(ok)score++;
+      done=true;var q=Q[i],ok=Number(b.dataset.a)===q[1];if(ok)score++;detail.push({id:ids[i],ok:ok});
       [].forEach.call(box.querySelectorAll(".opt"),function(o){o.disabled=true;if(Number(o.dataset.a)===q[1])o.classList.add("correct");});
       if(!ok)b.classList.add("wrong");
       document.getElementById("fb").innerHTML='<div class="fb '+(ok?"ok":"no")+'"><b>'+(ok?"¡Muy bien! ":"Cuidado. ")+'</b>'+TEM.esc(q[2])+'</div>';
       document.getElementById("bar").style.transform="scaleX("+((i+1)/Q.length)+")";
       var nx=document.getElementById("nx");nx.hidden=false;nx.textContent=i<Q.length-1?"Siguiente":"Ver mi resultado";nx.focus();
     }else if(b.id==="nx"){if(i<Q.length-1){i++;render();}else finish();}
-    else if(b.id==="again"){i=0;score=0;render();}
+    else if(b.id==="again"){i=0;score=0;detail=[];render();}
     else if(b.id==="savebtn"){
       b.disabled=true;var sc=score;
-      TEM.save(k,sc,Q.length).then(function(w){
-        document.getElementById("sv").innerHTML=w==="ok"?'<h3>¡Listo!</h3><p>Tu resultado '+sc+'/'+Q.length+' quedó guardado en tu cuenta.</p><a class="btn" href="'+root+'ingresar.html">Ver mis resultados</a>':'<h3>No se pudo guardar</h3><p>Probá de nuevo en un momento.</p><button type="button" class="btn" id="savebtn">Reintentar</button>';
+      TEM.save(k,sc,Q.length,detail).then(function(w){
+        document.getElementById("sv").innerHTML=w==="ok"?'<h3>¡Listo!</h3><p>Tu resultado '+sc+'/'+Q.length+' quedó guardado en tu cuenta.</p><a class="btn" href="'+root+'perfil.html">Ver mis resultados</a>':'<h3>No se pudo guardar</h3><p>Probá de nuevo en un momento.</p><button type="button" class="btn" id="savebtn">Reintentar</button>';
       });
     }
   });
