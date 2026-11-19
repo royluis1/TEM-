@@ -1,5 +1,10 @@
 (function(){
 var S=window.TEM={},C=window.TEM_CFG||{};
+/* raíz del sitio, sirve aunque esté en una subcarpeta (ej. GitHub Pages) */
+var ROOT=(function(){try{return new URL("../../",document.currentScript.src).href;}catch(e){return location.origin+"/";}})();
+/* preferencias locales (tamaño de letra) */
+S.get=function(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v);}catch(e){return d;}};
+S.set=function(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
 S.LEVELS={"nivel-1":"Nivel 1","nivel-2":"Nivel 2","nivel-3":"Nivel 3"};
 S.esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});};
 S.abbr=function(n){var p=String(n).trim().split(/\s+/);return p.length>1?p[0]+" "+p[p.length-1].charAt(0).toUpperCase()+".":p[0];};
@@ -7,7 +12,7 @@ S.ready=!!(C.SUPABASE_URL&&C.SUPABASE_ANON_KEY&&window.supabase);
 S.recovery=/[#&]type=recovery/.test(location.hash);
 var sb=S.ready?window.supabase.createClient(C.SUPABASE_URL,C.SUPABASE_ANON_KEY):null;
 function nob(){return Promise.reject(new Error("NO_BACKEND"));}
-function back(){return location.origin+"/ingresar.html";}
+function back(){return ROOT+"ingresar.html";}
 S.errText=function(e){var m=String(e&&e.message||e);
   if(/NO_BACKEND/.test(m))return "El ingreso todavía no está conectado al servidor.";
   if(/Invalid login/i.test(m))return "Correo o contraseña incorrectos.";
@@ -33,13 +38,13 @@ S.updatePassword=function(pass){if(!sb)return nob();return sb.auth.updateUser({p
 S.onRecovery=function(cb){if(sb)sb.auth.onAuthStateChange(function(ev){if(ev==="PASSWORD_RECOVERY")cb();});};
 S.save=function(k,s,t){
   if(!sb)return Promise.resolve("error");
-  return sb.from("resultados").insert({nivel:k,puntaje:s,total:t}).then(function(r){return r.error?"error":"ok";});
+  return sb.from("resultados").insert({nivel:k,puntaje:s,total:t}).then(function(r){return r.error?"error":"ok";},function(){return "error";});
 };
 S.mine=function(){
   if(!sb)return Promise.resolve([]);
-  return sb.from("resultados").select("nivel,puntaje,total,created_at").order("created_at",{ascending:false}).then(function(r){return r.data||[];});
+  return sb.from("resultados").select("nivel,puntaje,total,created_at").order("created_at",{ascending:false}).then(function(r){return r.data||[];},function(){return [];});
 };
-S.mineHtml=function(rows){
+S.tableHtml=S.mineHtml=function(rows){
   return '<div class="scroll"><table><caption class="sr-only">Mis resultados</caption><thead><tr><th>Nivel</th><th>Puntaje</th><th>Fecha</th></tr></thead><tbody>'+
   rows.map(function(r){return '<tr><td>'+(S.LEVELS[r.nivel]||"")+'</td><td class="score">'+r.puntaje+'/'+r.total+'</td><td>'+new Date(r.created_at).toLocaleDateString("es-AR")+'</td></tr>';}).join("")+'</tbody></table></div>';
 };
