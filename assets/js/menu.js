@@ -5,6 +5,18 @@ TEM.nav();
 if(!nav)return;
 var items=[].slice.call(nav.querySelectorAll(".has-sub"));
 function btn(it){return it.querySelector(":scope > button");}
+var courses=items.filter(function(it){return btn(it).textContent.trim()==="Cursos";})[0];
+var coursesPanel=courses&&courses.querySelector(":scope > .menu-panel");
+if(coursesPanel&&!coursesPanel.querySelector('a[href*="Herramientas-Digitales/index.html"]')){
+  var allCourses=[].filter.call(coursesPanel.querySelectorAll("a"),function(a){var title=a.querySelector("b");return title&&title.textContent.trim()==="Todos los cursos";})[0];
+  if(allCourses){
+    var courseLink=document.createElement("a"),courseTitle=document.createElement("b"),courseDescription=document.createElement("span");
+    courseLink.href=new URL("Herramientas-Digitales/index.html",allCourses.href).href;
+    courseTitle.textContent="Herramientas digitales";
+    courseDescription.textContent="Dos clases para vender con redes";
+    courseLink.appendChild(courseTitle);courseLink.appendChild(courseDescription);coursesPanel.appendChild(courseLink);
+  }
+}
 function close(it,ret){it.removeAttribute("data-open");collapse(it);btn(it).setAttribute("aria-expanded","false");if(ret)btn(it).focus();}
 function closeAll(except){items.forEach(function(it){if(it!==except&&it.hasAttribute("data-open"))close(it);});}
 function setMenu(on){document.body.toggleAttribute("data-menu",on);burger.setAttribute("aria-expanded",on?"true":"false");}
