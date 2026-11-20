@@ -18,21 +18,77 @@
 <li><a id="login-link" href="ingresar.html">Ingresar</a></li>
 <li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
 </ul></nav></div></header>
-<main id="main" class="wrap"><nav class="crumbs" aria-label="Dónde estás"><a href="index.html">Inicio</a> › <span aria-current="page">Política de privacidad</span></nav>
-<h1>Política de privacidad</h1>
-<p class="lead">Explicamos con palabras simples qué datos guardamos, quién los ve y cómo borrarlos.</p>
-<h2>Qué datos guardamos</h2>
-<ul><li><b>Nombre y apellido</b>, <b>correo electrónico</b> y <b>grupo</b>.</li><li><b>Contraseña:</b> se guarda cifrada. Nadie puede verla, ni siquiera el equipo.</li><li><b>Resultados de las evaluaciones:</b> nivel, puntaje, fecha y qué preguntas acertaste y cuáles no.</li><li>En tu navegador se guarda tu sesión (para que no tengas que ingresar cada vez) y el tamaño de letra que elegiste.</li></ul>
-<p>No pedimos DNI, domicilio ni teléfono.</p>
-<h2>Para qué los usamos</h2>
-<p>Para que puedas ingresar, guardar tu avance y para que los docentes vean cómo le va a cada grupo y puedan ayudarte mejor.</p>
-<h2>Quién los ve</h2>
-<div class="grid"><article class="card"><h3>Vos</h3><p style="margin:0">Ves todos tus datos en “Mi perfil”.</p></article><article class="card"><h3>Los docentes</h3><p style="margin:0">Ven tu <b>nombre</b>, tu <b>grupo</b> y tus <b>resultados</b>. Nunca ven tu correo.</p></article><article class="card"><h3>Otros participantes</h3><p style="margin:0">Nadie. No hay ninguna lista pública con tus datos.</p></article></div>
-<p>Además, las personas que administran técnicamente la base de datos del proyecto pueden acceder a ella para mantenerla. Usamos estos servicios: Supabase (guarda las cuentas y los datos), Brevo (envía el correo de confirmación) y Vercel (aloja el sitio).</p>
-<h2>Cómo borrar tu cuenta</h2>
-<ol><li>Ingresá y abrí <a href="perfil.html">Mi perfil</a>.</li><li>Tocá “Borrar mi cuenta” y confirmá.</li></ol>
-<p>Se eliminan tu cuenta y todos tus resultados. No se puede deshacer. Antes podés descargar tus resultados desde el mismo lugar. También podés corregir tu nombre y tu grupo, o cambiar tu contraseña.</p>
-<p class="meta">Si tenés dudas, consultá a tu docente. Última actualización: noviembre de 2026.</p>
+<main id="main" class="wrap privacy-page">
+<nav class="crumbs" aria-label="Dónde estás"><a href="index.html">Inicio</a> › <span aria-current="page">Política de privacidad</span></nav>
+<section class="privacy-hero" aria-labelledby="privacy-title">
+  <span class="privacy-kicker">Información clara y transparente</span>
+  <h1 id="privacy-title">Política de privacidad</h1>
+  <p class="lead">Conocé qué datos guardamos, para qué los usamos y cómo podés administrar tu cuenta.</p>
+</section>
+<section class="privacy-summary" aria-labelledby="summary-title">
+  <h2 id="summary-title">En pocas palabras</h2>
+  <div class="grid">
+    <article class="card"><h3>🔐 Tus datos están protegidos</h3><p>Guardamos solo lo necesario para tu cuenta y tus resultados.</p></article>
+    <article class="card"><h3>👀 Vos elegís quién puede verlos</h3><p>Tu información no aparece en listas públicas.</p></article>
+    <article class="card"><h3>🎓 Docentes con acceso limitado</h3><p>Ven tu nombre, grupo y avance, pero no tu correo.</p></article>
+    <article class="card"><h3>🗑️ Podés borrar tu cuenta</h3><p>Desde Mi perfil podés eliminar tu cuenta y tus resultados.</p></article>
+  </div>
+</section>
+<div class="privacy-layout">
+  <div class="privacy-content">
+    <section class="privacy-section" id="datos">
+      <h2>📋 Qué datos guardamos</h2>
+      <ul class="privacy-data-list">
+        <li><span class="privacy-icon" aria-hidden="true">👤</span><div><b>Datos de identificación</b><span>Nombre y apellido, correo electrónico y grupo.</span></div></li>
+        <li><span class="privacy-icon" aria-hidden="true">🔒</span><div><b>Contraseña protegida</b><span>Se guarda cifrada. Nadie puede verla, ni siquiera el equipo.</span></div></li>
+        <li><span class="privacy-icon" aria-hidden="true">✓</span><div><b>Resultados de las evaluaciones</b><span>Nivel, puntaje, fecha y respuestas correctas o incorrectas.</span></div></li>
+        <li><span class="privacy-icon" aria-hidden="true">⚙</span><div><b>Preferencias del navegador</b><span>La sesión activa y el tamaño de letra que elegiste.</span></div></li>
+      </ul>
+      <div class="privacy-note" style="margin-top:16px">No solicitamos DNI, domicilio ni número de teléfono.</div>
+    </section>
+
+    <section class="privacy-section" id="uso">
+      <h2>🎯 Para qué usamos los datos</h2>
+      <p>Los usamos para permitir tu ingreso, guardar tu progreso y brindar una experiencia adaptada a tu cursada.</p>
+      <p>Los docentes también pueden consultar el avance de sus grupos para acompañarte y orientar mejor el aprendizaje.</p>
+    </section>
+
+    <section class="privacy-section" id="acceso">
+      <h2>👥 Quién puede verlos</h2>
+      <div class="privacy-grid">
+        <article class="privacy-card"><h3>Vos</h3><p>Podés consultar tus datos en <b>Mi perfil</b>.</p></article>
+        <article class="privacy-card"><h3>Los docentes</h3><p>Ven tu nombre, grupo y resultados. <b>Tu correo electrónico no es visible.</b></p></article>
+        <article class="privacy-card"><h3>Otros participantes</h3><p>No tienen acceso. No existe una lista pública con tus datos.</p></article>
+      </div>
+      <div class="privacy-provider">
+        <span aria-hidden="true">🛡️</span>
+        <p style="margin:0">Las personas responsables de la administración técnica también pueden acceder a la base de datos para mantenerla. Utilizamos <b>Supabase</b> para cuentas y datos, <b>Brevo</b> para el correo de confirmación y <b>Vercel</b> para alojar el sitio.</p>
+      </div>
+    </section>
+
+    <section class="privacy-section privacy-delete" id="borrar">
+      <h2>🗑️ Cómo borrar tu cuenta</h2>
+      <ol class="privacy-step-list">
+        <li><span>Ingresá y abrí <a href="perfil.html">Mi perfil</a>.</span></li>
+        <li><span>Seleccioná “Borrar mi cuenta” y confirmá la acción.</span></li>
+      </ol>
+      <p>Se eliminan tu cuenta y todos tus resultados de forma permanente. Antes podés descargar tus resultados desde el mismo perfil. También podés corregir tu nombre o grupo, y cambiar tu contraseña.</p>
+    </section>
+
+    <div class="privacy-update" aria-label="Información de actualización">
+      <span>Si tenés dudas, consultá a tu docente.</span>
+      <span>Última actualización: noviembre de 2026</span>
+    </div>
+  </div>
+
+  <aside class="privacy-toc" aria-label="Contenido de esta página">
+    <strong>En esta página</strong>
+    <a href="#datos">Qué datos guardamos</a>
+    <a href="#uso">Para qué los usamos</a>
+    <a href="#acceso">Quién puede verlos</a>
+    <a href="#borrar">Borrar tu cuenta</a>
+  </aside>
+</div>
 </main>
 <footer class="site-footer"><div class="logos"><img src="assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div><p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="privacidad.html">Política de privacidad</a></p></footer>
 </body></html>
