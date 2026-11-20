@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tem-cache-v1';
+const CACHE_NAME = 'tem-cache-v2';
 
 const ASSETS = [
   './',
@@ -28,7 +28,10 @@ const ASSETS = [
   './assets/img/Logo-a-color.png',
   './assets/img/TEM-logo.png',
   './assets/img/icon-192.png',
-  './assets/img/icon-512.png'
+  './assets/img/icon-512.png',
+  './cursos/Herramientas-Digitales/index.html',
+  './cursos/Herramientas-Digitales/clase-1.html',
+  './cursos/Herramientas-Digitales/clase-2.html',
 ];
 
 self.addEventListener('install', (event) => {

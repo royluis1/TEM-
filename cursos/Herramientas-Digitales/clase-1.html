@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<title>Clase 1 · Canva y presencia en redes · TEM</title><meta name="description" content="Aprendé a mostrar tus productos en redes y a crear placas sencillas con Canva."><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+<title>Clase 1 · Canva y presencia en redes · TEM</title>
+<link rel="manifest" href="../../manifest.json">
+<meta name="description" content="Aprendé a mostrar tus productos en redes y a crear placas sencillas con Canva."><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/styles.css">
 <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -11,30 +13,173 @@
 <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
 <nav id="site-nav" aria-label="Menú principal"><ul>
 <li><a href="../../index.html">Inicio</a></li>
-<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/niveles.html"><b>Los 3 niveles</b><span>Básico, Intermedio y Estratégico</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
-<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button><div class="menu-panel"><a href="../index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a><div class="sub"><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button><div class="sub-list" id="sub-co" hidden><a href="../cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a><a href="../cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a><a href="../cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a><a href="../cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a></div></div></div></li>
+<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button>
+    <div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/niveles.html"><b>Los 3 niveles</b><span>Básico, Intermedio y Estratégico</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div>
+</li>
+<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button>
+<div class="menu-panel">
+  <a href="../index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a>
+  <div class="sub">
+    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button>
+    <div class="sub-list" id="sub-co" hidden>
+      <a href="../cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a>
+      <a href="../cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a>
+      <a href="../cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a>
+      <a href="../cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a>
+    </div>
+  </div>
+  <div class="sub">
+    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-hd"><b>Herramientas digitales</b><span>Canva, CapCut y redes</span></button>
+    <div class="sub-list" id="sub-hd" hidden>
+      <a href="../Herramientas-Digitales/index.html"><b>Ver el curso</b><span>Elegir clase</span></a>
+      <a href="../Herramientas-Digitales/clase-1.html"><b>Clase 1 · Canva y redes</b><span>Placas y presencia online</span></a>
+      <a href="../Herramientas-Digitales/clase-2.html"><b>Clase 2 · CapCut</b><span>Videos cortos y cuidados</span></a>
+    </div>
+  </div>
+</div>
+</li>
 <li><a id="login-link" href="../../ingresar.html">Ingresar</a></li>
 <li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
 </ul></nav></div></header>
-<main id="main" class="wrap"><nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../index.html">Cursos</a> › <a href="index.html">Herramientas digitales</a> › <span aria-current="page">Clase 1</span></nav>
-<h1>Clase 1 · Canva y presencia en redes</h1><p class="lead">Mostrá tus productos con claridad y aprendé a preparar una placa sencilla.</p>
-<section aria-label="Presentación del plan"><div class="embed"><iframe src="https://www.canva.com/design/DAHance1Hjc/zYltzQMoybNMVakAmn_AHw/view?embed" title="Presentación del plan TEM" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
-<p class="meta"><a href="https://www.canva.com/design/DAHance1Hjc/zYltzQMoybNMVakAmn_AHw/view" target="_blank" rel="noopener">Abrir la presentación en pantalla completa</a></p></section>
-<div data-tabs><div class="tablist" role="tablist" aria-label="Secciones de la Clase 1">
-<button class="tab" role="tab" id="t-importante" aria-controls="p-importante" data-tab="importante" aria-selected="true">Lo importante</button>
-<button class="tab" role="tab" id="t-redes" aria-controls="p-redes" data-tab="redes" aria-selected="false">Redes para vender</button>
-<button class="tab" role="tab" id="t-canva" aria-controls="p-canva" data-tab="canva" aria-selected="false">Canva</button>
-<button class="tab" role="tab" id="t-evaluacion" aria-controls="p-evaluacion" data-tab="evaluacion" aria-selected="false">Evaluación</button></div>
-<section id="p-importante" role="tabpanel" aria-labelledby="t-importante" tabindex="0"><div class="hero"><div><p>Una foto clara, información fácil de encontrar y una respuesta amable ayudan a que tus clientes confíen y sepan cómo comprar. Vamos paso a paso.</p></div></div><h2>Lo más importante</h2><ul><li>Mostrá el producto con buena luz y contá cuánto cuesta.</li><li>Elegí las redes que te resulten cómodas y publicá con regularidad.</li><li>Decí claramente qué querés que haga la persona: consultar, reservar o comprar.</li></ul><p><button class="btn" type="button" data-goto="redes">Empezar →</button></p></section>
-<section id="p-redes" role="tabpanel" aria-labelledby="t-redes" tabindex="0" hidden><h2>Redes para vender</h2>
-<article class="card"><span class="tag">Fotos y videos</span><h3>Instagram</h3><p>Sirve para mostrar tus productos con fotos, historias y videos cortos. Usá un perfil profesional con el nombre de tu negocio y un medio de contacto.</p><p><b>Consejo:</b> sacá fotos nítidas con luz natural. Sumá el precio y explicá cómo hacer un pedido.</p><div class="do"><b>Qué hacer:</b> Tocá editar perfil y completá qué vendés, dónde estás y cómo te pueden escribir. En cada publicación, invitá a consultar o comprar.</div></article>
-<article class="card"><span class="tag">Atención y pedidos</span><h3>WhatsApp Business</h3><p>Sirve para conversar con clientes y ordenar los pedidos del negocio. El catálogo muestra productos, fotos y precios.</p><p><b>Consejo:</b> indicá tus horarios y respondé cuando puedas, aunque sea para avisar cuándo vas a contestar.</p><div class="do"><b>Qué hacer:</b> Cargá algunos productos en el catálogo, con una foto clara, nombre y precio. Revisá que tu teléfono y horario estén bien.</div></article>
-<article class="card"><span class="tag">Videos cortos</span><h3>TikTok</h3><p>Sirve para compartir videos y mostrar cómo es tu producto, cómo se usa o cómo lo preparás. Un video sencillo puede llamar la atención de gente nueva.</p><p><b>Consejo:</b> empezá con una frase o imagen que dé ganas de seguir mirando, y grabá en vertical.</p><div class="do"><b>Qué hacer:</b> En los primeros segundos mostrale a la gente qué ofrecés. Al final, decí qué hacer: por ejemplo, “Escribime para consultar”.</div></article>
-<article class="card"><span class="tag">Comunidad local</span><h3>Facebook</h3><p>Sirve para compartir novedades y llegar a personas de tu zona, incluso en grupos locales donde se permiten publicaciones de comercios.</p><p><b>Consejo:</b> publicá fotos nítidas con luz natural y agregá precio, ubicación y forma de contacto.</p><div class="do"><b>Qué hacer:</b> Fijate las reglas del grupo antes de publicar. Mantené actualizados los horarios y respondé los comentarios con amabilidad.</div></article>
-<p><button class="btn" type="button" data-goto="canva">Seguir con Canva →</button></p></section>
-<section id="p-canva" role="tabpanel" aria-labelledby="t-canva" tabindex="0" hidden><h2>Canva: armá una placa para tu producto</h2><p>Canva es una herramienta para preparar imágenes con texto. Podés usar una plantilla y cambiarle la foto, el nombre y el precio para hacer un aviso sencillo.</p><figure><div class="embed"><iframe src="https://drive.google.com/file/d/12lG4SQbdlR10ILjpJcWw4xux1YrUpZaw/preview" title="Video: cómo hacer una placa para tu producto en Canva" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div><figcaption class="meta">Video: cómo hacer una placa para tu producto en Canva. <a href="https://drive.google.com/file/d/12lG4SQbdlR10ILjpJcWw4xux1YrUpZaw/view?usp=drive_link" target="_blank" rel="noopener">Abrir en Google Drive</a>.</figcaption></figure><h3>Pasos para hacer tu placa</h3><ol><li>Abrí Canva y elegí crear un diseño para una publicación de Instagram.</li><li>Elegí una plantilla simple, con letras que se lean bien.</li><li>Agregá una foto nítida de tu producto.</li><li>Escribí el nombre y el precio. Usá pocas palabras.</li><li>Revisá que se entienda cómo pedirlo y guardá la imagen.</li></ol><p><button class="btn" type="button" data-goto="evaluacion">Ir a la evaluación →</button></p></section>
-<section id="p-evaluacion" role="tabpanel" aria-labelledby="t-evaluacion" tabindex="0" hidden><h2>Evaluación</h2><p>Elegí una respuesta en cada pregunta. Al final vas a ver tu resultado.</p><div class="quiz" id="quiz" data-level="herramientas-clase-1" data-root="../../"></div><script type="application/json" id="quiz-data">[["¿Qué ayuda a sacar una foto más nítida con el celular?", 0, "Con el lente limpio y buena luz natural la foto sale más clara y sin ruido.", ["Limpiar el lente y usar luz natural.", "Usar siempre el zoom al máximo.", "Sacarla con poca luz."]], ["¿Para qué sirve la cuadrícula de la cámara?", 2, "La cuadrícula ayuda a centrar el producto y a mantener la foto derecha. Las líneas no se ven en la foto final.", ["Para que las líneas queden dibujadas en la foto.", "Para ahorrar batería.", "Para centrar el producto y mantener la foto derecha."]], ["¿En qué formato conviene grabar videos para Instagram y TikTok?", 1, "Estas redes están pensadas para ver en vertical, a pantalla completa.", ["En horizontal.", "En vertical.", "En cualquier posición, da lo mismo."]], ["¿Qué formato de Instagram puede llegar a personas que aún no te siguen?", 1, "Los reels se muestran a gente nueva. Las historias y la foto de perfil llegan sobre todo a quienes ya te siguen.", ["La placa de historia.", "El reel.", "La foto de perfil."]], ["¿Qué es un “hook” en una publicación?", 0, "El hook es la frase o imagen del comienzo que hace que la gente se detenga a mirar.", ["Una frase o imagen que capta la atención al comienzo.", "Un enlace para descargar una aplicación.", "La contraseña de la cuenta."]], ["¿Para qué sirve un CTA o llamado a la acción?", 2, "El CTA le dice al público qué queremos que haga: escribir, comprar, seguirnos.", ["Para editar videos más rápido.", "Para cambiar el tamaño de las imágenes.", "Para indicar qué queremos que haga el público."]], ["¿Qué ventaja tiene una cuenta profesional de Instagram?", 1, "Una cuenta profesional ofrece estadísticas y botones de contacto.", ["Funciona sin conexión a internet.", "Ofrece estadísticas y botones de contacto.", "Borra los comentarios automáticamente."]], ["¿Qué herramienta de WhatsApp Business muestra productos con foto y precio?", 0, "El catálogo muestra tus productos con foto y precio.", ["El catálogo.", "Las etiquetas.", "La copia de seguridad."]], ["¿Qué es Canva?", 1, "Canva te permite armar imágenes con texto y fotos usando diseños ya preparados.", ["Una aplicación para cobrar con tarjeta.", "Una herramienta para crear diseños con fotos y texto.", "Una red para subir videos en vivo."]], ["¿Qué tamaño conviene elegir para una historia de Instagram en Canva?", 0, "La historia se prepara en formato vertical, de 1080 × 1920 píxeles.", ["1080 × 1920 píxeles, en vertical.", "1080 × 1080 píxeles, en cuadrado.", "1920 × 1080 píxeles, en horizontal."]], ["¿Para qué sirve una plantilla de Canva?", 2, "La plantilla ya trae una composición. Podés cambiar la foto y el texto por los de tu negocio.", ["Para publicar sin revisar el texto.", "Para que Canva elija el precio del producto.", "Para empezar con un diseño y adaptarlo a tu producto."]]]</script></section></div>
-<nav class="pager" aria-label="Clases del curso"><a class="btn alt" href="index.html">← Portada del curso</a><a class="btn alt" href="clase-2.html">Clase 2 · CapCut →</a></nav>
+
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../index.html">Cursos</a> › <a href="index.html">Herramientas digitales</a> › <span aria-current="page">Clase 1</span></nav>
+
+<h1>Clase 1 · Canva y presencia en redes</h1>
+<p class="lead">Mostrá tus productos con claridad y aprendé a preparar una placa sencilla para tu negocio.</p>
+
+<section class="hero" aria-labelledby="h-lograr-1">
+  <div>
+    <h2 id="h-lograr-1">Lo que vas a lograr en esta clase</h2>
+    <ul>
+      <li>Elegir las redes que mejor se adaptan a tu comercio para mostrar lo que vendés.</li>
+      <li>Entender qué es Canva y armar tu primera placa o flyer desde el celular.</li>
+      <li>Evitar los errores más comunes de diseño para que tus clientes entiendan rápido cómo comprarte.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="card" aria-label="Presentación de la clase">
+  <h2 style="margin-top:0">Presentación de la clase</h2>
+  <div class="embed"><iframe src="https://www.canva.com/design/DAHance1Hjc/zYltzQMoybNMVakAmn_AHw/view?embed" title="Presentación del plan TEM" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
+  <p class="meta" style="margin-bottom:0"><a href="https://www.canva.com/design/DAHance1Hjc/zYltzQMoybNMVakAmn_AHw/view" target="_blank" rel="noopener">Abrir la presentación en pantalla completa</a></p>
+</section>
+
+<div data-tabs>
+  <div class="tablist" role="tablist" aria-label="Secciones de la Clase 1">
+    <button class="tab" role="tab" id="t-importante" aria-controls="p-importante" data-tab="importante" aria-selected="true">Lo importante</button>
+    <button class="tab" role="tab" id="t-redes" aria-controls="p-redes" data-tab="redes" aria-selected="false">Redes para vender</button>
+    <button class="tab" role="tab" id="t-canva" aria-controls="p-canva" data-tab="canva" aria-selected="false">Canva</button>
+    <button class="tab" role="tab" id="t-evaluacion" aria-controls="p-evaluacion" data-tab="evaluacion" aria-selected="false">Evaluación</button>
+  </div>
+
+  <section id="p-importante" role="tabpanel" aria-labelledby="t-importante" tabindex="0">
+    <article class="card">
+      <h2 style="margin-top:0">Lo más importante</h2>
+      <p>Una foto clara, información fácil de encontrar y una respuesta amable ayudan a que tus clientes confíen y sepan cómo comprar. Vamos paso a paso.</p>
+      <ul>
+        <li>Mostrá el producto con buena luz y contá cuánto cuesta.</li>
+        <li>Elegí las redes que te resulten cómodas y publicá con regularidad.</li>
+        <li>Decí claramente qué querés que haga la persona: consultar, reservar o comprar.</li>
+      </ul>
+    </article>
+    <div class="actions"><button class="btn" type="button" data-goto="redes">Seguir con Redes para vender →</button></div>
+  </section>
+
+  <section id="p-redes" role="tabpanel" aria-labelledby="t-redes" tabindex="0" hidden>
+    <h2>Redes para vender</h2>
+    <article class="card"><span class="tag">Fotos y videos</span><h3>Instagram</h3><p>Sirve para mostrar tus productos con fotos, historias y videos cortos. Usá un perfil profesional con el nombre de tu negocio y un medio de contacto.</p><p><b>Consejo:</b> sacá fotos nítidas con luz natural. Sumá el precio y explicá cómo hacer un pedido.</p><div class="do"><b>Qué hacer:</b> Tocá editar perfil y completá qué vendés, dónde estás y cómo te pueden escribir. En cada publicación, invitá a consultar o comprar.</div></article>
+    <article class="card"><span class="tag">Atención y pedidos</span><h3>WhatsApp Business</h3><p>Sirve para conversar con clientes y ordenar los pedidos del negocio. El catálogo muestra productos, fotos y precios.</p><p><b>Consejo:</b> indicá tus horarios y respondé cuando puedas, aunque sea para avisar cuándo vas a contestar.</p><div class="do"><b>Qué hacer:</b> Cargá algunos productos en el catálogo, con una foto clara, nombre y precio. Revisá que tu teléfono y horario estén bien.</div></article>
+    <article class="card"><span class="tag">Videos cortos</span><h3>TikTok</h3><p>Sirve para compartir videos y mostrar cómo es tu producto, cómo se usa o cómo lo preparás. Un video sencillo puede llamar la atención de gente nueva.</p><p><b>Consejo:</b> empezá con una frase o imagen que dé ganas de seguir mirando, y grabá en vertical.</p><div class="do"><b>Qué hacer:</b> En los primeros segundos mostrale a la gente qué ofrecés. Al final, decí qué hacer: por ejemplo, “Escribime para consultar”.</div></article>
+    <article class="card"><span class="tag">Comunidad local</span><h3>Facebook</h3><p>Sirve para compartir novedades y llegar a personas de tu zona, incluso en grupos locales donde se permiten publicaciones de comercios.</p><p><b>Consejo:</b> publicá fotos nítidas con luz natural y agregá precio, ubicación y forma de contacto.</p><div class="do"><b>Qué hacer:</b> Fijate las reglas del grupo antes de publicar. Mantené actualizados los horarios y respondé los comentarios con amabilidad.</div></article>
+    <div class="actions"><button class="btn" type="button" data-goto="canva">Seguir con Canva →</button></div>
+  </section>
+
+  <section id="p-canva" role="tabpanel" aria-labelledby="t-canva" tabindex="0" hidden>
+    <h2>Canva: armá una placa para tu comercio</h2>
+
+    <article class="card">
+      <h3 style="margin-top:0">¿Qué es Canva y para qué sirve a un comercio?</h3>
+      <p>Canva es una aplicación gratuita que te permite crear imágenes, flyers y carteles combinando fotos y texto desde el celular o la computadora. No hace falta saber diseño porque ya trae plantillas armadas listas para editar. Para un comercio sirve para anunciar promociones, mostrar productos con precio y avisar horarios de forma prolija y profesional. Así tus publicaciones llaman más la atención y generan más confianza en tus clientes.</p>
+    </article>
+
+    <article class="card">
+      <h3 style="margin-top:0">Video paso a paso</h3>
+      <figure style="margin:0">
+        <div class="embed"><iframe src="https://drive.google.com/file/d/12lG4SQbdlR10ILjpJcWw4xux1YrUpZaw/preview" title="Video: cómo hacer una placa para tu producto en Canva" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+        <figcaption class="meta" style="margin-top:10px">Video: cómo hacer una placa para tu producto en Canva. <a href="https://drive.google.com/file/d/12lG4SQbdlR10ILjpJcWw4xux1YrUpZaw/view?usp=drive_link" target="_blank" rel="noopener">Abrir en Google Drive</a>.</figcaption>
+      </figure>
+    </article>
+
+    <article class="card">
+      <h3 style="margin-top:0">Cómo hacer una placa o flyer en 6 pasos</h3>
+      <ol>
+        <li>Abrí Canva en tu celular o navegador y tocá en <b>Crear un diseño</b> (elegí “Post de Instagram” o “Historia”).</li>
+        <li>Buscá una plantilla simple que tenga pocos elementos y espacio libre para tu foto.</li>
+        <li>Tocá la imagen de ejemplo y reemplazala por una foto nítida de tu producto con buena luz.</li>
+        <li>Cambiá el título por el nombre de tu oferta o producto usando pocas palabras.</li>
+        <li>Agregá el precio bien visible y tus datos de contacto (WhatsApp, dirección o red social).</li>
+        <li>Revisá que todo se lea sin hacer zoom y tocá <b>Descargar</b> para guardar la imagen en tu galería.</li>
+      </ol>
+      <div class="do">
+        <b>Consejos clave para tu placa:</b>
+        <ul style="margin:6px 0 0">
+          <li><b>Elegí 2 o 3 colores</b> que combinen y usalos siempre para que reconozcan tu negocio.</li>
+          <li><b>Usá letra grande y clara</b>, con buen contraste respecto del fondo (texto oscuro en fondo claro, o al revés).</li>
+          <li><b>Poné siempre el precio</b> o un valor de referencia para ahorrar consultas repetidas.</li>
+          <li><b>Sumá tu contacto</b> (número de WhatsApp o dirección) en un lugar fácil de ver.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3 style="margin-top:0">Ejemplos de qué podés hacer con Canva</h3>
+      <div class="grid">
+        <div class="card" style="margin:0">
+          <span class="pill ok">Idea 1</span>
+          <h3 style="margin-top:.5em">Promo del día</h3>
+          <p style="margin-bottom:0">Una foto tentadora de un solo producto, el precio destacado bien grande y hasta cuándo dura la oferta.</p>
+        </div>
+        <div class="card" style="margin:0">
+          <span class="pill ok">Idea 2</span>
+          <h3 style="margin-top:.5em">Lista de precios</h3>
+          <p style="margin-bottom:0">Un listado ordenado con 4 a 6 productos principales y sus valores, ideal para enviar por WhatsApp o subir a historias.</p>
+        </div>
+        <div class="card" style="margin:0">
+          <span class="pill ok">Idea 3</span>
+          <h3 style="margin-top:.5em">Aviso de horarios</h3>
+          <p style="margin-bottom:0">Una placa simple con días, horarios de atención, dirección y si hacés envíos o tomás pedidos en feriados.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="tag">Para evitar</span>
+      <h3 style="margin-top:0">Errores comunes al armar una placa</h3>
+      <ul style="margin-bottom:0">
+        <li><b>Poner demasiado texto:</b> si la imagen parece un folleto lleno de párrafos, la gente pasa de largo.</li>
+        <li><b>Usar letras muy chicas o cursivas difíciles:</b> pensá que la mayoría la va a ver desde la pantalla del celular.</li>
+        <li><b>Subir fotos borrosas u oscuras:</b> una mala foto le quita atractivo al producto aunque el diseño sea lindo.</li>
+        <li><b>Olvidar cómo comprar:</b> si no ponés precio, WhatsApp o dirección, el cliente no sabe cuál es el siguiente paso.</li>
+      </ul>
+    </article>
+
+    <div class="actions"><button class="btn" type="button" data-goto="evaluacion">Ir a la evaluación →</button></div>
+  </section>
+
+  <section id="p-evaluacion" role="tabpanel" aria-labelledby="t-evaluacion" tabindex="0" hidden>
+    <h2>Evaluación</h2>
+    <p>Elegí una respuesta en cada pregunta. Al final vas a ver tu resultado.</p>
+    <div class="quiz" id="quiz" data-level="herramientas-clase-1" data-root="../../"></div>
+    <script type="application/json" id="quiz-data">[["¿Qué ayuda a sacar una foto más nítida con el celular?", 0, "Con el lente limpio y buena luz natural la foto sale más clara y sin ruido.", ["Limpiar el lente y usar luz natural.", "Usar siempre el zoom al máximo.", "Sacarla con poca luz."]], ["¿Para qué sirve la cuadrícula de la cámara?", 2, "La cuadrícula ayuda a centrar el producto y a mantener la foto derecha. Las líneas no se ven en la foto final.", ["Para que las líneas queden dibujadas en la foto.", "Para ahorrar batería.", "Para centrar el producto y mantener la foto derecha."]], ["¿En qué formato conviene grabar videos para Instagram y TikTok?", 1, "Estas redes están pensadas para ver en vertical, a pantalla completa.", ["En horizontal.", "En vertical.", "En cualquier posición, da lo mismo."]], ["¿Qué formato de Instagram puede llegar a personas que aún no te siguen?", 1, "Los reels se muestran a gente nueva. Las historias y la foto de perfil llegan sobre todo a quienes ya te siguen.", ["La placa de historia.", "El reel.", "La foto de perfil."]], ["¿Qué es un “hook” en una publicación?", 0, "El hook es la frase o imagen del comienzo que hace que la gente se detenga a mirar.", ["Una frase o imagen que capta la atención al comienzo.", "Un enlace para descargar una aplicación.", "La contraseña de la cuenta."]], ["¿Para qué sirve un CTA o llamado a la acción?", 2, "El CTA le dice al público qué queremos que haga: escribir, comprar, seguirnos.", ["Para editar videos más rápido.", "Para cambiar el tamaño de las imágenes.", "Para indicar qué queremos que haga el público."]], ["¿Qué ventaja tiene una cuenta profesional de Instagram?", 1, "Una cuenta profesional ofrece estadísticas y botones de contacto.", ["Funciona sin conexión a internet.", "Ofrece estadísticas y botones de contacto.", "Borra los comentarios automáticamente."]], ["¿Qué herramienta de WhatsApp Business muestra productos con foto y precio?", 0, "El catálogo muestra tus productos con foto y precio.", ["El catálogo.", "Las etiquetas.", "La copia de seguridad."]], ["¿Qué es Canva?", 1, "Canva te permite armar imágenes con texto y fotos usando diseños ya preparados.", ["Una aplicación para cobrar con tarjeta.", "Una herramienta para crear diseños con fotos y texto.", "Una red para subir videos en vivo."]], ["¿Qué tamaño conviene elegir para una historia de Instagram en Canva?", 0, "La historia se prepara en formato vertical, de 1080 × 1920 píxeles.", ["1080 × 1920 píxeles, en vertical.", "1080 × 1080 píxeles, en cuadrado.", "1920 × 1080 píxeles, en horizontal."]], ["¿Para qué sirve una plantilla de Canva?", 2, "La plantilla ya trae una composición. Podés cambiar la foto y el texto por los de tu negocio.", ["Para publicar sin revisar el texto.", "Para que Canva elija el precio del producto.", "Para empezar con un diseño y adaptarlo a tu producto."]]]</script>
+  </section>
+</div>
+
+<nav class="pager" aria-label="Clases del curso">
+  <a class="btn alt" href="index.html">← Volver al curso</a>
+  <a class="btn" href="clase-2.html">Siguiente clase: CapCut →</a>
+</nav>
 </main>
+
 <footer class="site-footer"><div class="logos"><img src="../../assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="../../assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div><p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="../../privacidad.html">Política de privacidad</a></p></footer>
 </body></html>
