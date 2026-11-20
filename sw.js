@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tem-cache-v2';
+const CACHE_NAME = 'tem-cache-v3';
 
 const ASSETS = [
   './',
@@ -9,7 +9,6 @@ const ASSETS = [
   './manifest.json',
   './plan/cursada.html',
   './plan/equipo.html',
-  './plan/niveles.html',
   './plan/que-es.html',
   './cursos/index.html',
   './cursos/cuidate-online/index.html',

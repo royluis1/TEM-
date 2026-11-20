@@ -254,3 +254,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 }
 
 .plan-que-es .actions{justify-content:center}
+/* portada herramientas */
+.tiles.stack{grid-template-columns:1fr}
+.tiles.stack .tile{display:grid;grid-template-columns:auto 1fr auto;gap:8px 18px;align-items:center}
+.tiles.stack .tile::after{content:"→";font-size:1.6rem;color:var(--primary);font-weight:800}

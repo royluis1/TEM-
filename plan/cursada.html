@@ -2,9 +2,66 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Cómo es la cursada · TEM</title>
 <link rel="manifest" href="../manifest.json">
-<meta name="theme-color" content="#1D7882"><meta name="description" content="Plan de Formación en Tecnología Móvil para la Ciudad de Justo Daract"><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#055860"><meta name="description" content="Conocé dónde se cursa TEM, sus modalidades y quiénes te acompañan."><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+/* cursada */
+.cursada .summary-list{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 34px}
+.cursada .summary-list .pill{border:2px solid var(--line);background:var(--card);color:var(--text);padding:8px 14px}
+.cursada .stagger>*{animation-delay:0ms}
+.cursada .stagger>:nth-child(2){animation-delay:40ms}
+.cursada .stagger>:nth-child(3){animation-delay:80ms}
+.cursada .stagger>:nth-child(4){animation-delay:120ms}
+.cursada .content-section{margin:38px 0}
+.cursada h2{margin-bottom:14px}
+.cursada .where-card{margin:0}
+.cursada .where-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(240px,.9fr);gap:24px;align-items:center}
+.cursada .map-link{display:block;color:var(--primary);font-weight:800;text-decoration:none;border-radius:var(--r);transition:transform 150ms var(--ease-out)}
+.cursada .map-image{display:block;width:100%;height:auto;aspect-ratio:1200 / 658;object-fit:cover;border-radius:var(--r);transition:transform 150ms var(--ease-out)}
+.cursada .map-open{display:inline-block;margin-top:12px}
+.cursada .map-link:active{transform:scale(.97)}
+.cursada .place-copy p{margin:.5em 0}
+.cursada .map-note{color:var(--muted);font-size:.9rem}
+.cursada .mode-card{height:100%}
+.cursada .mode-card p{margin-bottom:0}
+.cursada .steps{margin-top:24px}
+.cursada .step-list{list-style:none;padding:0;margin:24px 0 0}
+.cursada .step-list>li{margin:0}
+.cursada .step-card{display:flex;align-items:flex-start;gap:14px;height:100%}
+.cursada .step-card>div{min-width:0}
+.cursada .step-number{display:inline-flex;flex:0 0 48px;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%;background:var(--accent);color:#12302f;font-size:1.35rem;font-weight:800}
+.cursada .step-card h3{margin:.15em 0 .35em}
+.cursada .step-card p{margin:0;color:var(--muted)}
+.cursada .tutor-card{display:flex;align-items:flex-start;gap:16px}
+.cursada .tutor-icon{font-size:2rem;line-height:1}
+.cursada .tutor-card h3{margin:0 0 6px}
+.cursada .tutor-card p{margin:0}
+.cursada .duration-card{display:grid;grid-template-columns:minmax(120px,.5fr) minmax(0,1.5fr);gap:20px;align-items:center}
+.cursada .duration-card .stat{margin:0;font-size:clamp(2.4rem,7vw,3.8rem)}
+.cursada .duration-bar{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border:2px solid var(--line);border-radius:var(--r)}
+.cursada .duration-part{display:flex;min-height:76px;align-items:center;justify-content:center;padding:12px;text-align:center;font-size:.92rem;font-weight:800;color:#12302f}
+.cursada .duration-part:first-child{background:var(--mint)}
+.cursada .duration-part:last-child{background:var(--accent)}
+.cursada .closing-card{padding:24px}
+.cursada .closing-card h2{margin:0 0 8px}
+.cursada .closing-card p{margin:0;color:var(--muted)}
+.cursada .closing-card .actions{margin:18px 0 0}
+@media (hover:hover) and (pointer:fine){
+  .cursada .map-link:hover{transform:translateY(-2px)}
+  .cursada .map-link:hover .map-image{transform:scale(1.01)}
+}
+@media (max-width:640px){
+  .cursada .where-grid,.cursada .duration-card{grid-template-columns:1fr}
+  .cursada .where-grid{gap:16px}
+  .cursada .duration-part{min-height:88px;padding:8px 6px;font-size:.8rem}
+  .cursada .closing-card .actions .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  .cursada .map-link,.cursada .map-image{transition:none}
+  .cursada .map-link:hover,.cursada .map-link:hover .map-image,.cursada .map-link:active{transform:none}
+}
+</style>
 <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script defer src="../assets/js/config.js"></script><script defer src="../assets/js/store.js"></script><script defer src="../assets/js/menu.js"></script><script defer src="../assets/js/app.js"></script>
 </head><body>
@@ -13,7 +70,7 @@
 <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
 <nav id="site-nav" aria-label="Menú principal"><ul>
 <li><a href="../index.html">Inicio</a></li>
-<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../plan/niveles.html"><b>Los 3 niveles</b><span>Básico, Intermedio y Estratégico</span></a><a href="../plan/cursada.html" aria-current="page"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
+<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../plan/cursada.html" aria-current="page"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button>
 <div class="menu-panel">
   <a href="../cursos/index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a>
@@ -27,11 +84,11 @@
     </div>
   </div>
   <div class="sub">
-    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-hd"><b>Herramientas digitales</b><span>Canva, CapCut y redes</span></button>
+    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-hd"><b>Herramientas digitales</b><span>Canva, CapCut e IA para vender</span></button>
     <div class="sub-list" id="sub-hd" hidden>
       <a href="../cursos/Herramientas-Digitales/index.html"><b>Ver el curso</b><span>Elegir clase</span></a>
-      <a href="../cursos/Herramientas-Digitales/clase-1.html"><b>Clase 1 · Canva y redes</b><span>Placas y presencia online</span></a>
-      <a href="../cursos/Herramientas-Digitales/clase-2.html"><b>Clase 2 · CapCut</b><span>Videos cortos y cuidados</span></a>
+      <a href="../cursos/Herramientas-Digitales/clase-1.html"><b>Clase 1 · Canva, CapCut y redes para vender</b><span>Placa, video y evaluación</span></a>
+      <a href="../cursos/Herramientas-Digitales/clase-2.html"><b>Clase 2 · Magic Studio</b><span>Creá con inteligencia artificial en Canva</span></a>
     </div>
   </div>
 </div>
@@ -39,9 +96,58 @@
 <li><a id="login-link" href="../ingresar.html">Ingresar</a></li>
 <li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
 </ul></nav></div></header>
-<main id="main" class="wrap"><nav class="crumbs" aria-label="Dónde estás"><a href="../index.html">Inicio</a> › <span>El plan</span> › <span aria-current="page">Cómo es la cursada</span></nav>
-<h1>Cómo es la cursada</h1><p class="lead">Clases en persona y cursos online, con acompañamiento.</p>
-<div class="grid"><article class="card"><h3>📍 Dónde</h3><p style="margin:0">En Justo Daract: Centros de Capacitación y Salón Municipal.</p></article><article class="card"><h3>📱 Cómo</h3><p style="margin:0">Clases presenciales y semipresenciales, y cursos online desde el celular, a tu ritmo.</p></article><article class="card"><h3>🤝 Con quién</h3><p style="margin:0">Estudiantes de la UNViMe te acompañan como tutores.</p></article><article class="card"><h3>🗓️ Cuánto dura</h3><p style="margin:0">El proyecto dura 4 meses: 2 de preparación de materiales y 2 de dictado.</p></article></div>
+<main id="main" class="wrap cursada">
+<nav class="crumbs" aria-label="Dónde estás"><a href="../index.html">Inicio</a> › <span>El plan</span> › <span aria-current="page">Cómo es la cursada</span></nav>
+<h1>Cómo es la cursada</h1>
+<p class="lead">Clases en persona y cursos online, con acompañamiento.</p>
+<div class="summary-list stagger" aria-label="Resumen de la cursada">
+  <span class="pill"><span aria-hidden="true">📍</span> En Justo Daract</span>
+  <span class="pill"><span aria-hidden="true">🤝</span> Con tutores</span>
+  <span class="pill"><span aria-hidden="true">📱</span> A tu ritmo</span>
+  <span class="pill"><span aria-hidden="true">🗓️</span> 4 meses</span>
+</div>
+<section class="content-section" aria-labelledby="donde">
+  <h2 id="donde">¿Dónde?</h2>
+  <div class="card where-card"><div class="where-grid">
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Municipalidad+de+Justo+Daract" target="_blank" rel="noopener">
+      <img class="map-image" src="../assets/img/mapa-justo-daract.webp" alt="Mapa de Justo Daract con un punto rojo en la Municipalidad" width="1200" height="658" loading="lazy">
+      <span class="map-open">Abrir en Google Maps ↗ <span class="sr-only">(se abre en una pestaña nueva)</span></span>
+    </a>
+    <div class="place-copy"><h3>En Justo Daract</h3><p>Podés cursar en los Centros de Capacitación y en el Salón Municipal.</p><p class="map-note">El punto rojo marca la Municipalidad, como referencia.</p></div>
+  </div></div>
+</section>
+<section class="content-section" aria-labelledby="modalidad">
+  <h2 id="modalidad">¿Cómo cursar?</h2>
+  <div class="tiles stagger">
+    <article class="tile mode-card"><h3>En persona</h3><p>Participá de una clase en un espacio de Justo Daract, con acompañamiento.</p></article>
+    <article class="tile mode-card"><h3>Semipresencial</h3><p>Combiná encuentros presenciales con actividades para seguir por tu cuenta.</p></article>
+    <article class="tile mode-card"><h3>Online</h3><p>Entrá a los cursos desde el celular y avanzá a tu ritmo.</p></article>
+  </div>
+  <h3 class="steps">Tres pasos para empezar</h3>
+  <ol class="tiles stagger step-list">
+    <li class="tile step-card"><span class="step-number">1</span><div><h3>Elegí un curso</h3><p>Buscá el tema que te interesa y empezá por ahí.</p></div></li>
+    <li class="tile step-card"><span class="step-number">2</span><div><h3>Cursá a tu ritmo</h3><p>Leé y practicá sin apuro. Podés volver cuando lo necesites.</p></div></li>
+    <li class="tile step-card"><span class="step-number">3</span><div><h3>Hacé la evaluación y guardá tu resultado</h3><p>Ingresá a tu cuenta para conservarlo en tu perfil.</p></div></li>
+  </ol>
+</section>
+<section class="content-section" aria-labelledby="quien">
+  <h2 id="quien">¿Con quién?</h2>
+  <article class="card tutor-card"><span class="tutor-icon" aria-hidden="true">🎓</span><div><h3>Con tutores de la UNViMe</h3><p>Estudiantes de Programador Universitario en Sistemas te acompañan durante el aprendizaje.</p></div></article>
+</section>
+<section class="content-section" aria-labelledby="duracion">
+  <h2 id="duracion">¿Cuánto dura?</h2>
+  <article class="card duration-card">
+    <p class="stat">4 meses</p>
+    <div class="duration-bar" role="img" aria-label="4 meses en total: 2 meses de preparación de materiales y 2 meses de dictado">
+      <div class="duration-part">2 meses · Preparación de materiales</div>
+      <div class="duration-part">2 meses · Dictado</div>
+    </div>
+  </article>
+</section>
+<section class="content-section" aria-labelledby="empeza">
+  <article class="card closing-card"><h2 id="empeza">Empezá cuando quieras</h2><p>Elegí un curso o creá una cuenta para guardar tus resultados.</p><div class="actions"><a class="btn" href="../cursos/index.html">Ver los cursos</a><a class="btn alt" href="../ingresar.html">Crear mi cuenta</a></div></article>
+  <nav class="pager" aria-label="Más información del plan"><a class="btn alt" href="que-es.html">← ¿Qué es TEM?</a><a class="btn alt" href="equipo.html">Quiénes lo hacen →</a></nav>
+</section>
 </main>
 <footer class="site-footer"><div class="logos"><img src="../assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="../assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div><p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="../privacidad.html">Política de privacidad</a></p></footer>
 </body></html>

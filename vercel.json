@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/plan/niveles.html",
+      "destination": "/cursos/cuidate-online/index.html",
+      "permanent": true
+    }
+  ]
+}

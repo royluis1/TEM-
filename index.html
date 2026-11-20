@@ -2,7 +2,7 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Inicio · TEM</title>
 <link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#1D7882"><meta name="description" content="Aprendé a usar tu celular para tus trámites y tu trabajo."><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#1D7882"><meta name="description" content="Aprendé a usar tu celular para tus trámites y tu trabajo."><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -13,63 +13,28 @@
 <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
 <nav id="site-nav" aria-label="Menú principal"><ul>
 <li><a href="index.html" aria-current="page">Inicio</a></li>
-<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="plan/niveles.html"><b>Los 3 niveles</b><span>Básico, Intermedio y Estratégico</span></a><a href="plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
-<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button>
-<div class="menu-panel">
-  <a href="cursos/index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a>
-  <div class="sub">
-    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button>
-    <div class="sub-list" id="sub-co" hidden>
-      <a href="cursos/cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a>
-      <a href="cursos/cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a>
-      <a href="cursos/cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a>
-      <a href="cursos/cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a>
-    </div>
-  </div>
-  <div class="sub">
-    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-hd"><b>Herramientas digitales</b><span>Canva, CapCut y redes</span></button>
-    <div class="sub-list" id="sub-hd" hidden>
-      <a href="cursos/Herramientas-Digitales/index.html"><b>Ver el curso</b><span>Elegir clase</span></a>
-      <a href="cursos/Herramientas-Digitales/clase-1.html"><b>Clase 1 · Canva y redes</b><span>Placas y presencia online</span></a>
-      <a href="cursos/Herramientas-Digitales/clase-2.html"><b>Clase 2 · CapCut</b><span>Videos cortos y cuidados</span></a>
-    </div>
-  </div>
-</div>
-</li>
+<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
+<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button><div class="menu-panel"><a href="cursos/index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a><a href="cursos/Herramientas-Digitales/index.html"><b>Herramientas digitales</b><span>Canva, CapCut e IA para vender</span></a><div class="sub"><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button><div class="sub-list" id="sub-co" hidden><a href="cursos/cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a><a href="cursos/cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a><a href="cursos/cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a><a href="cursos/cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a></div></div></div></li>
 <li><a id="login-link" href="ingresar.html">Ingresar</a></li>
 <li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
 </ul></nav></div></header>
 <main id="main" class="wrap">
 <section class="hero"><img src="assets/img/Encabezado TEM.svg" alt="" width="260" height="157"><div><h1>Aprendé a usar tu celular para tus trámites y tu trabajo</h1><p>El plan TEM de la UNViMe y la Municipalidad de Justo Daract te enseña paso a paso y con acompañamiento.</p></div></section>
-
-<section class="home-section" aria-labelledby="learn-title">
-<h2 id="learn-title">¿Qué vas a aprender?</h2>
-<div class="tiles stagger">
-<a class="tile" href="cursos/cuidate-online/index.html"><span class="ic" aria-hidden="true">🛡️</span><h3>Cuidate Online</h3><p>Reconocé estafas y protegé tus datos y tu dinero.</p></a>
-<a class="tile" href="cursos/Herramientas-Digitales/index.html"><span class="ic" aria-hidden="true">🎨</span><h3>Herramientas Digitales</h3><p>Usá Canva y CapCut para mostrar y vender productos.</p></a>
-<a class="tile" href="plan/niveles.html"><span class="ic" aria-hidden="true">📱</span><h3>Tecnología a tu ritmo</h3><p>Avanzá desde lo básico hasta contenidos más completos.</p></a>
-</div>
-</section>
-
-<section class="home-stats" aria-label="Datos del plan TEM">
-<div><p class="stat">3</p><p>niveles de formación</p></div>
-<div><p class="stat">2</p><p>clases en Herramientas Digitales</p></div>
-<div><p class="stat">100%</p><p>gratuito</p></div>
-</section>
-
-<section class="home-section" aria-labelledby="audience-title">
-<h2 id="audience-title">¿Para quién es?</h2>
-<div class="grid stagger">
-<article class="card"><h3>👋 Si empezás ahora</h3><p>Para personas que quieren aprender desde lo básico, con ayuda y sin apuro.</p></article>
-<article class="card"><h3>💼 Si tenés un comercio</h3><p>Para emprendedores que quieren publicar, mostrar y vender desde el celular.</p></article>
-<article class="card"><h3>🏘️ Si vivís en Justo Daract</h3><p>Para vecinos que buscan usar mejor el celular en sus actividades diarias.</p></article>
-</div>
-</section>
-
-<section class="home-final" aria-labelledby="start-title">
-<div><h2 id="start-title">Empezá cuando quieras</h2><p>Elegí un curso o conocé cómo funciona el plan TEM.</p></div>
-<nav class="actions" aria-label="Acciones principales"><a class="btn" href="cursos/index.html">Ver los cursos</a><a class="btn alt" href="plan/que-es.html">Conocé el plan</a></nav>
-</section>
+<div class="actions"><a class="btn" href="cursos/index.html">Ver los cursos</a><a class="btn alt" id="account-cta" href="ingresar.html">Crear mi cuenta</a></div>
+<!-- Foto 1 pendiente (WebP o JPG, menos de 200 KB): <img src="assets/img/aprendizaje-tem.webp" alt="Personas adultas aprendiendo a usar el celular" width="960" height="640"> -->
+<section aria-labelledby="aprender"><h2 id="aprender">¿Qué vas a aprender?</h2><div class="tiles"><article class="tile"><span class="ic" aria-hidden="true">📱</span><h3>Usar el celular</h3><p>Dar pasos con confianza y a tu ritmo.</p></article><article class="tile"><span class="ic" aria-hidden="true">🛡️</span><h3>Cuidarte en internet</h3><p>Reconocer engaños y proteger tus datos.</p></article><article class="tile"><span class="ic" aria-hidden="true">🛍️</span><h3>Mostrar tu negocio</h3><p>Crear publicaciones y comunicar lo que ofrecés.</p></article></div></section>
+<section aria-label="Datos del plan"><div class="grid"><article class="card"><p class="stat">3</p><p>Niveles para aprender paso a paso.</p></article><article class="card"><p class="stat">100%</p><p>Gratuito.</p></article><article class="card"><p class="stat" style="font-size:1.5rem">En Justo Daract</p><p>Con acompañamiento.</p></article></div></section>
+<section aria-labelledby="publico"><h2 id="publico">¿Para quién es?</h2><div class="tiles"><article class="tile"><h3>Para empezar</h3><p>No hace falta tener experiencia con el celular.</p></article><article class="tile"><h3>Para resolver cosas</h3><p>Aprendé a comunicarte y hacer trámites.</p></article><article class="tile"><h3>Para tu comercio</h3><p>Mostrá tus productos y atendé consultas.</p></article></div></section>
+<!-- Foto 2 pendiente (menos de 200 KB): <img src="assets/img/comercio-local.jpg" alt="Comerciante preparando una publicación para su negocio" width="960" height="640" loading="lazy"> -->
+<section aria-labelledby="pasos"><h2 id="pasos">Cómo funciona</h2><div class="tiles"><article class="tile"><span class="ic" aria-hidden="true">1</span><h3>Elegí un curso</h3><p>Empezá por el tema que te interesa.</p></article><article class="tile"><span class="ic" aria-hidden="true">2</span><h3>Aprendé a tu ritmo</h3><p>Leé, mirá y practicá sin apuro.</p></article><article class="tile"><span class="ic" aria-hidden="true">3</span><h3>Hacé la evaluación y guardá tu resultado</h3><p>Ingresá a tu cuenta para conservarlo.</p></article></div></section>
+<section aria-labelledby="cursada"><h2 id="cursada">Dónde, cuándo y con quién</h2><article class="card"><p><b>Dónde:</b> Centros de Capacitación y Salón Municipal, en Justo Daract.</p><p><b>Días:</b> [COMPLETAR: días de cursada].</p><p><b>Horarios:</b> [COMPLETAR: horarios].</p><p><b>Quién te acompaña:</b> estudiantes de la UNViMe como tutores.</p><a class="btn alt" href="plan/cursada.html">Cómo es la cursada</a></article></section>
+<!-- Foto 3 pendiente (menos de 200 KB): <img src="assets/img/taller-tem.jpg" alt="Grupo en una clase presencial del plan TEM" width="960" height="640" loading="lazy"> -->
+<section aria-labelledby="consejo"><h2 id="consejo">Un consejo para cuidarte</h2><article class="card"><span class="tag">Cuidá tus datos</span><p><strong>Nadie serio te pide claves por mensaje.</strong> No compartas códigos ni claves, aunque el mensaje parezca urgente.</p><a href="cursos/cuidate-online/index.html">Aprendé más en Cuidate Online</a></article></section>
+<section aria-labelledby="equipo"><h2 id="equipo">Quiénes lo hacen</h2><article class="card"><div style="display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap"><img src="assets/img/Logo-a-color.png" alt="Logo de la Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="assets/img/escudo actos.svg" alt="Escudo de la Municipalidad de Justo Daract" width="100" height="100"></div><p>Lo hacen estudiantes de Programador Universitario en Sistemas.</p><a class="btn alt" href="plan/equipo.html">Conocé al equipo</a></article></section>
+<section aria-labelledby="preguntas"><h2 id="preguntas">Preguntas frecuentes</h2><details class="card"><summary>¿Cuesta algo?</summary><p>No. El plan es gratuito.</p></details><details class="card"><summary>¿Necesito saber usar el celular?</summary><p>No. Podés empezar desde lo básico y preguntar cuando necesites ayuda.</p></details><details class="card"><summary>¿Necesito internet?</summary><p>Para hacer los cursos online, sí. Si tenés dudas sobre las clases presenciales, consultá los días y horarios.</p></details><details class="card"><summary>¿Puedo ir acompañado?</summary><p>Sí, podés ir con alguien de confianza.</p></details></section>
 </main>
+<script>
+window.addEventListener("load",function(){if(window.TEM&&typeof TEM.getUser==="function"){TEM.getUser().then(function(user){if(user){var link=document.getElementById("account-cta");link.textContent="Mi perfil";link.href="perfil.html";}});}});
+</script>
 <footer class="site-footer"><div class="logos"><img src="assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div><p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="privacidad.html">Política de privacidad</a></p></footer>
 </body></html>

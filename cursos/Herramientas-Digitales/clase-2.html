@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<title>Clase 2 · CapCut y videos para vender · TEM</title>
-<link rel="manifest" href="../../manifest.json">
-<meta name="description" content="Aprendé a editar videos cortos y a cuidarte al vender por redes."><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+<title>Clase 2 · Magic Studio: creá con IA en Canva · TEM</title><meta name="description" content="Retocá fotos, creá imágenes y adaptá tus diseños con las herramientas de inteligencia artificial de Canva."><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/styles.css">
 <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
@@ -13,120 +11,39 @@
 <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
 <nav id="site-nav" aria-label="Menú principal"><ul>
 <li><a href="../../index.html">Inicio</a></li>
-<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/niveles.html"><b>Los 3 niveles</b><span>Básico, Intermedio y Estratégico</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
-<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button>
-<div class="menu-panel">
-  <a href="../index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a>
-  <div class="sub">
-    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button>
-    <div class="sub-list" id="sub-co" hidden>
-      <a href="../cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a>
-      <a href="../cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a>
-      <a href="../cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a>
-      <a href="../cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a>
-    </div>
-  </div>
-  <div class="sub">
-    <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-hd"><b>Herramientas digitales</b><span>Canva, CapCut y redes</span></button>
-    <div class="sub-list" id="sub-hd" hidden>
-      <a href="../Herramientas-Digitales/index.html"><b>Ver el curso</b><span>Elegir clase</span></a>
-      <a href="../Herramientas-Digitales/clase-1.html"><b>Clase 1 · Canva y redes</b><span>Placas y presencia online</span></a>
-      <a href="../Herramientas-Digitales/clase-2.html"><b>Clase 2 · CapCut</b><span>Videos cortos y cuidados</span></a>
-    </div>
-  </div>
-</div>
-</li>
+<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
+<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button><div class="menu-panel"><a href="../index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a><a href="index.html"><b>Herramientas digitales</b><span>Canva, CapCut e IA para vender</span></a><div class="sub"><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button><div class="sub-list" id="sub-co" hidden><a href="../cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a><a href="../cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a><a href="../cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a><a href="../cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a></div></div></div></li>
 <li><a id="login-link" href="../../ingresar.html">Ingresar</a></li>
 <li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
 </ul></nav></div></header>
-
-<main id="main" class="wrap">
-<nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../index.html">Cursos</a> › <a href="index.html">Herramientas digitales</a> › <span aria-current="page">Clase 2</span></nav>
-
-<h1>Clase 2 · CapCut y videos para vender</h1>
-<p class="lead">Editá videos cortos para mostrar tus productos y aprendé a vender con cuidado.</p>
-
-<section class="hero" aria-labelledby="h-lograr-2">
-  <div>
-    <h2 id="h-lograr-2">Lo que vas a lograr en esta clase</h2>
-    <ul>
-      <li>Grabar y recortar un video corto y vertical de tu producto con CapCut.</li>
-      <li>Sumarle texto claro con el nombre, precio y forma de contacto para subirlo a Reels o TikTok.</li>
-      <li>Reconocer las estafas más frecuentes al vender por redes y cobrar por transferencia.</li>
-    </ul>
-  </div>
-</section>
-
-<div data-tabs>
-  <div class="tablist" role="tablist" aria-label="Secciones de la Clase 2">
-    <button class="tab" role="tab" id="t-importante" aria-controls="p-importante" data-tab="importante" aria-selected="true">Lo importante</button>
-    <button class="tab" role="tab" id="t-capcut" aria-controls="p-capcut" data-tab="capcut" aria-selected="false">CapCut</button>
-    <button class="tab" role="tab" id="t-cuidado" aria-controls="p-cuidado" data-tab="cuidado" aria-selected="false">Cuidate al vender</button>
-  </div>
-
-  <section id="p-importante" role="tabpanel" aria-labelledby="t-importante" tabindex="0">
-    <article class="card">
-      <h2 style="margin-top:0">Lo más importante</h2>
-      <p>Un video corto puede mostrar cómo es tu producto y cómo se usa. Con unos pocos cortes y un texto claro ya podés contar mucho.</p>
-      <ul>
-        <li>Grabá en vertical y con buena luz.</li>
-        <li>Mostrá el producto al comienzo del video.</li>
-        <li>Usá pocas palabras y decí cómo te pueden contactar.</li>
-      </ul>
-    </article>
-    <div class="actions"><button class="btn" type="button" data-goto="capcut">Seguir con CapCut →</button></div>
-  </section>
-
-  <section id="p-capcut" role="tabpanel" aria-labelledby="t-capcut" tabindex="0" hidden>
-    <h2>CapCut: editá un video corto</h2>
-
-    <article class="card">
-      <h3 style="margin-top:0">Video paso a paso</h3>
-      <p>CapCut sirve para recortar videos y agregarles texto. Podés mostrar tu producto en pocos segundos, sin hacer una edición complicada.</p>
-      <figure style="margin:0">
-        <div class="embed"><iframe src="https://drive.google.com/file/d/18ASSySboJFhHqZyI4tAe1mM7uwjSuHa9/preview" title="Video: cómo editar un video corto en CapCut" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-        <figcaption class="meta" style="margin-top:10px">Video: cómo editar un video corto en CapCut. <a href="https://drive.google.com/file/d/18ASSySboJFhHqZyI4tAe1mM7uwjSuHa9/view?usp=drive_link" target="_blank" rel="noopener">Abrir en Google Drive</a>.</figcaption>
-      </figure>
-    </article>
-
-    <article class="card">
-      <h3 style="margin-top:0">Pasos para editar tu video</h3>
-      <ol>
-        <li>Abrí CapCut y tocá para crear un proyecto nuevo.</li>
-        <li>Elegí un video vertical donde se vea bien tu producto.</li>
-        <li>Recortá el comienzo y el final para dejar solo lo importante.</li>
-        <li>Agregá un texto corto, como el nombre o el precio.</li>
-        <li>Revisá el video completo y guardalo para compartirlo en Reels o TikTok.</li>
-      </ol>
-      <div class="do"><b>Consejo:</b> mantené el video corto (entre 10 y 20 segundos) y asegurate de que el texto no quede tapado por los botones de Instagram o TikTok en los bordes.</div>
-    </article>
-
-    <div class="actions"><button class="btn" type="button" data-goto="cuidado">Seguir con los cuidados →</button></div>
-  </section>
-
-  <section id="p-cuidado" role="tabpanel" aria-labelledby="t-cuidado" tabindex="0" hidden>
-    <h2>Cuidate al vender</h2>
-    <article class="card">
-      <span class="tag">Seguridad en cobros</span>
-      <h3 style="margin-top:0">Antes de entregar un producto</h3>
-      <ul>
-        <li>No entregues el producto por una captura: fijate en tu cuenta si el pago entró de verdad.</li>
-        <li>No abras enlaces raros que te manden para “recibir” o “liberar” un pago.</li>
-        <li>No compartas claves ni códigos que te lleguen por mensaje.</li>
-        <li>No pagues para recibir una transferencia. Si te piden dinero para destrabar un cobro, frená y consultá.</li>
-        <li>Si algo te apura o te parece raro, confirmalo con la persona por otro medio antes de hacer nada.</li>
-      </ul>
-      <div class="do"><b>Para profundizar:</b> si querés aprender más sobre engaños y mensajes falsos, visitá <a href="../cuidate-online/index.html">el curso Cuidate Online</a>.</div>
-    </article>
-    <div class="actions"><a class="btn" href="clase-1.html#evaluacion">Rendir la evaluación de la Clase 1 →</a></div>
-  </section>
-</div>
-
-<nav class="pager" aria-label="Clases del curso">
-  <a class="btn alt" href="clase-1.html">← Volver a Clase 1</a>
-  <a class="btn" href="index.html">Volver al curso</a>
-</nav>
+<main id="main" class="wrap"><nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../index.html">Cursos</a> › <a href="index.html">Herramientas digitales</a> › <span aria-current="page">Clase 2 · Magic Studio: creá con IA en Canva</span></nav>
+<h1>Clase 2 · Magic Studio: creá con inteligencia artificial en Canva</h1><p class="lead">Usá una foto de tu producto para probar cambios y preparar diseños para tu comercio.</p>
+<div data-tabs><div class="tablist" role="tablist" aria-label="Secciones de la Clase 2">
+<button class="tab" role="tab" id="t-importante" aria-controls="p-importante" data-tab="importante" aria-selected="true">Lo importante</button>
+<button class="tab" role="tab" id="t-retoca" aria-controls="p-retoca" data-tab="retoca" aria-selected="false">Retocá tus fotos</button>
+<button class="tab" role="tab" id="t-imagenes" aria-controls="p-imagenes" data-tab="imagenes" aria-selected="false">Creá imágenes con IA</button>
+<button class="tab" role="tab" id="t-multiplica" aria-controls="p-multiplica" data-tab="multiplica" aria-selected="false">Multiplicá tu diseño</button>
+<button class="tab" role="tab" id="t-desafio" aria-controls="p-desafio" data-tab="desafio" aria-selected="false">Desafío</button></div>
+<section id="p-importante" role="tabpanel" aria-labelledby="t-importante" tabindex="0"><div class="hero"><div><p>Magic Studio reúne herramientas de Canva que usan inteligencia artificial. Te ayudan a editar imágenes y preparar una campaña para tu negocio, paso a paso.</p></div></div><h2>¿Qué vas a aprender?</h2><p>Vas a convertir una foto común de tu producto en publicaciones listas para mostrar y vender. No hace falta saber de diseño: probá una herramienta por vez y revisá el resultado.</p>
+<article class="card"><span class="tag">Aviso importante</span><p>Algunas funciones de Magic Studio pueden tener límites de uso en la cuenta gratuita de Canva o requerir Canva Pro. Los nombres o la ubicación de los botones pueden cambiar.</p></article>
+<!-- Video pendiente: cuando esté disponible, insertar aquí un video nativo: <video controls playsinline preload="metadata"><source src="herramientas/magic-studio.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video> -->
+<p><button class="btn" type="button" data-goto="retoca">Empezar a retocar →</button></p></section>
+<section id="p-retoca" role="tabpanel" aria-labelledby="t-retoca" tabindex="0" hidden><h2>Retocá tus fotos</h2><p>Elegí una foto clara de un producto. Si la herramienta no aparece en tu cuenta, seguí con otra y volvé a probar más adelante.</p>
+<article class="card"><span class="tag">Separar y mover</span><h3>Captura Mágica (Magic Grab)</h3><p>Separa el producto o la persona del fondo. Conserva parte de las sombras y la perspectiva para que puedas moverlo por el diseño como si fuera una pieza independiente.</p><ol><li>Subí una foto a tu diseño de Canva y seleccionala.</li><li>Abrí la edición de la foto y elegí Captura Mágica.</li><li>Marcá el producto o la persona y esperá a que Canva lo separe.</li><li>Arrastralo a otro lugar del diseño y acomodá el tamaño.</li></ol><div class="do"><b>Ejemplo para un comercio:</b> separá una taza de café de la mesa y movela junto al precio y el nombre de tu cafetería.</div><!-- Captura pendiente: herramientas/magic-grab.jpg. Cuando exista, insertar <img src="herramientas/magic-grab.jpg" alt="Producto separado del fondo con Captura Mágica en Canva" width="1200" height="675" loading="lazy"> --></article>
+<article class="card"><span class="tag">Ampliar el fondo</span><h3>Expansión Mágica (Magic Expand)</h3><p>Completa los bordes de una foto. Te puede ayudar a pasar de una foto vertical a un diseño panorámico 16:9 sin estirar el producto.</p><ol><li>Subí la foto vertical y seleccionala.</li><li>Elegí Expansión Mágica en las opciones de edición.</li><li>Marcá el formato panorámico 16:9 y el área que querés ampliar.</li><li>Generá las opciones y elegí la que se vea más natural.</li></ol><div class="do"><b>Ejemplo para un comercio:</b> ampliá una foto vertical de una torta para usarla en un cartel horizontal de la vidriera.</div><!-- Captura pendiente: herramientas/magic-expand.jpg. Cuando exista, insertar <img src="herramientas/magic-expand.jpg" alt="Foto vertical ampliada a un diseño panorámico en Canva" width="1200" height="675" loading="lazy"> --></article>
+<article class="card"><span class="tag">Cambiar una parte</span><h3>Edición Mágica (Magic Edit)</h3><p>Pintá con el pincel una parte de la foto y escribí qué querés cambiar. Canva propone una nueva versión de esa zona.</p><ol><li>Subí la foto y abrí Edición Mágica.</li><li>Pasá el pincel por la ropa u objeto que querés cambiar.</li><li>Escribí el cambio con palabras sencillas y específicas.</li><li>Generá las opciones y revisá cuál queda mejor.</li></ol><div class="do"><b>Ejemplo para un comercio:</b> pintá una chaqueta negra y pedí: “chaqueta de cuero rojo con acabado mate”.</div><!-- Captura pendiente: herramientas/magic-edit.jpg. Cuando exista, insertar <img src="herramientas/magic-edit.jpg" alt="Zona de una foto seleccionada para cambiarla con Edición Mágica" width="1200" height="675" loading="lazy"> --></article>
+<article class="card"><span class="tag">Editar un cartel</span><h3>Captura de Texto (Magic Text Grab)</h3><p>Reconoce el texto de una foto de un cartel o papel impreso y lo convierte en texto que podés editar en Canva.</p><ol><li>Subí una foto nítida del cartel y seleccionala.</li><li>Abrí las herramientas de edición y elegí Captura de Texto.</li><li>Marcá el texto que querés usar y confirmá la captura.</li><li>Corregí lo que haga falta y cambiá el tamaño o el color.</li></ol><div class="do"><b>Ejemplo para un comercio:</b> pasá el horario impreso de una pizarra a un aviso digital y actualizá los días de atención.</div><!-- Captura pendiente: herramientas/magic-text-grab.jpg. Cuando exista, insertar <img src="herramientas/magic-text-grab.jpg" alt="Texto de un cartel convertido en texto editable en Canva" width="1200" height="675" loading="lazy"> --></article>
+<p><button class="btn" type="button" data-goto="imagenes">Seguir con imágenes con IA →</button></p></section>
+<section id="p-imagenes" role="tabpanel" aria-labelledby="t-imagenes" tabindex="0" hidden><h2>Creá imágenes con IA (Dream Lab)</h2><p>Dream Lab crea imágenes a partir de una descripción. Podés elegir un estilo, como Filmic, Concept Art o 3D Render. También podés sumar una imagen de referencia para orientar el estilo o la composición.</p><h3>Cómo probarlo</h3><ol><li>Abrí Dream Lab desde Canva y escribí qué imagen necesitás.</li><li>Elegí un estilo, por ejemplo Filmic, Concept Art o 3D Render.</li><li>Si querés, cargá una imagen de referencia para orientar el aspecto o la composición.</li><li>Generá varias opciones, elegí una y revisá que sirva para tu publicación.</li></ol><h3>Escribí un pedido claro</h3><p>Podés armarlo así: <b>[Sujeto principal] + [Estilo artístico] + [Iluminación o cámara] + [Paleta de colores]</b>.</p><div class="card"><h3>Dos ejemplos para comercios</h3><ul><li><b>Torta:</b> “Una torta de chocolate con frutillas sobre una mesa de madera, estilo fotografía Filmic, luz suave de ventana y primer plano, paleta crema, marrón y rojo”.</li><li><b>Prenda:</b> “Una campera de jean colgada en una vidriera, estilo 3D Render, vista de frente con luz pareja, paleta azul, blanco y beige”.</li></ul></div><article class="card"><span class="tag">Consejos para tu pedido</span><ul><li>Sé específico con lo que querés mostrar.</li><li>Probá varias veces y elegí la opción que mejor te sirva.</li><li>No incluyas datos personales ni información de tus clientes.</li></ul></article><!-- Captura pendiente: herramientas/dream-lab.jpg. Cuando exista, insertar <img src="herramientas/dream-lab.jpg" alt="Imagen de producto generada en Dream Lab de Canva" width="1200" height="675" loading="lazy"> -->
+<p><button class="btn" type="button" data-goto="multiplica">Seguir con tus diseños →</button></p></section>
+<section id="p-multiplica" role="tabpanel" aria-labelledby="t-multiplica" tabindex="0" hidden><h2>Multiplicá tu diseño (Rediseño Mágico / Magic Switch)</h2><p>Magic Switch adapta un diseño para que puedas usarlo de otras maneras. Revisá siempre el resultado antes de publicarlo.</p>
+<article class="card"><span class="tag">Cambiar idioma</span><h3>Traducí tu diseño</h3><p>Traduce los textos y mantiene la diagramación para que no tengas que empezar de nuevo.</p><div class="do"><b>Ejemplo para un comercio:</b> traducí al portugués un menú de cafetería para compartirlo con visitantes.</div></article>
+<article class="card"><span class="tag">Pasar a un documento</span><h3>Convertí una presentación en un informe</h3><p>Transformá una presentación de 10 diapositivas en un informe o un resumen redactado.</p><div class="do"><b>Ejemplo para un comercio:</b> convertí una presentación de productos y precios en un resumen para enviar a un cliente mayorista.</div></article>
+<article class="card"><span class="tag">Cambiar formato</span><h3>Adaptá un diseño a redes</h3><p>Elegí publicaciones de Instagram y Stories verticales en Rediseño Mágico para crear los formatos con un solo clic.</p><div class="do"><b>Ejemplo para un comercio:</b> adaptá un cartel horizontal de una promoción a una publicación cuadrada y una historia para el celular.</div></article>
+<!-- Captura pendiente: herramientas/magic-switch.jpg. Cuando exista, insertar <img src="herramientas/magic-switch.jpg" alt="Un diseño adaptado a distintos formatos con Magic Switch en Canva" width="1200" height="675" loading="lazy"> -->
+<p><button class="btn" type="button" data-goto="desafio">Hacer el desafío →</button></p></section>
+<section id="p-desafio" role="tabpanel" aria-labelledby="t-desafio" tabindex="0" hidden><h2>Desafío · Los 3 clics</h2><p>Tenés 5 minutos. Usá una foto quieta de un producto y probá estas herramientas para armar una portada de revista profesional. No hay puntaje: es para practicar.</p><ol><li>☐ Abrí un diseño nuevo y agregá una foto estática de un producto.</li><li>☐ Usá Magic Grab para separar el producto y ubicarlo en la portada.</li><li>☐ Probá Magic Edit para cambiar un detalle de la foto.</li><li>☐ Usá Magic Expand para completar el fondo y darle formato de portada.</li><li>☐ Sumá un título breve y revisá que se lea bien.</li><li>☐ Guardá tu diseño y compartilo solo si querés.</li></ol><p><a class="btn" href="clase-1.html#evaluacion">Volver a la Clase 1 y rendir la evaluación →</a></p></section></div>
+<nav class="pager" aria-label="Clases del curso"><a class="btn alt" href="clase-1.html">← Clase 1 · Canva, CapCut y redes para vender</a><a class="btn alt" href="index.html">Portada del curso</a></nav>
 </main>
-
 <footer class="site-footer"><div class="logos"><img src="../../assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="../../assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div><p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="../../privacidad.html">Política de privacidad</a></p></footer>
 </body></html>
