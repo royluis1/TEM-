@@ -1,33 +1,112 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<title>Cuidate Online · TEM</title>
-<link rel="manifest" href="../../manifest.json">
-<meta name="theme-color" content="#1D7882">
-<meta name="description" content="Plan de Formación en Tecnología Móvil para la Ciudad de Justo Daract"><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/styles.css">
-<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script defer src="../../assets/js/config.js"></script><script defer src="../../assets/js/store.js"></script><script defer src="../../assets/js/menu.js"></script><script defer src="../../assets/js/app.js"></script>
-</head><body>
-<a class="skip" href="#main">Saltar al contenido</a>
-<header class="site-header"><div class="bar-in"><a class="brand" href="../../index.html"><img src="../../assets/img/TEM-logo.png" alt="TEM" width="100" height="34"><span class="brand-t">Plan de Formación en Tecnología Móvil</span></a>
-<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
-<nav id="site-nav" aria-label="Menú principal"><ul>
-<li><a href="../../index.html">Inicio</a></li>
-<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
-<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button><div class="menu-panel"><a href="../../cursos/index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a><a href="../Herramientas-Digitales/index.html"><b>Herramientas digitales</b><span>Canva, CapCut e IA para vender</span></a><div class="sub"><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button><div class="sub-list" id="sub-co" hidden><a href="../../cursos/cuidate-online/index.html" aria-current="page"><b>Ver el curso</b><span>Elegir nivel</span></a><a href="../../cursos/cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a><a href="../../cursos/cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a><a href="../../cursos/cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a></div></div></div></li>
-<li><a id="login-link" href="../../ingresar.html">Ingresar</a></li>
-<li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
-</ul></nav></div></header>
-<main id="main" class="wrap"><nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../index.html">Cursos</a> › <span aria-current="page">Cuidate Online</span></nav>
-<h1><span aria-hidden="true">🛡️</span> Cuidate Online</h1><p class="lead">Elegí el nivel que más se parezca a lo que ya hacés con el celular. Podés empezar por el que quieras.</p>
-<section aria-labelledby="elige-nivel"><h2 id="elige-nivel">¿Cuál es tu nivel?</h2>
-<div class="tiles stack">
-<a class="tile" href="nivel-1.html"><span class="ic" aria-hidden="true">📱</span><div class="tile-copy"><span class="pill ok">Nivel 1</span><h3>Lo básico</h3><p>Para vos si sentís: “Casi no uso el celular”.</p><ul><li>Abrir aplicaciones, moverte por la pantalla y conectarte a internet.</li><li>Cuidar tus claves y códigos.</li><li>Reconocer enlaces y códigos QR que pueden ser engañosos.</li></ul></div></a>
-<a class="tile" href="nivel-2.html"><span class="ic" aria-hidden="true">🔒</span><div class="tile-copy"><span class="pill ok">Nivel 2</span><h3>Intermedio</h3><p>Para vos si sentís: “Ya uso WhatsApp y el banco”.</p><ul><li>Reconocer engaños en mensajes, compras y redes.</li><li>Proteger WhatsApp y el correo con claves distintas y verificación en dos pasos.</li><li>Revisar pagos, enlaces y códigos QR antes de actuar.</li></ul></div></a>
-<a class="tile" href="nivel-3.html"><span class="ic" aria-hidden="true">🔎</span><div class="tile-copy"><span class="pill ok">Nivel 3</span><h3>Avanzado</h3><p>Para vos si sentís: “Quiero verificar páginas”.</p><ul><li>Revisar direcciones web antes de poner tus datos.</li><li>Reconocer páginas, anuncios, correos y aplicaciones falsas.</li><li>Comprobar pedidos sospechosos antes de responder o compartir información.</li></ul></div></a>
-</div></section>
-<section class="card" aria-labelledby="como-funcionan"><h2 id="como-funcionan">¿Cómo funcionan los niveles?</h2><p>Podés empezar por el nivel que quieras; no hace falta seguir un orden. Elegí el que más se parezca a lo que ya hacés con el celular.</p><p>En cada nivel encontrás “Lo importante”, “Estafas que conocer” y una evaluación. Con tu cuenta podés guardar el resultado y volver a verlo en tu perfil.</p><p>Podés cursar desde el celular y avanzar a tu ritmo.</p></section>
-</main>
-<footer class="site-footer"><div class="logos"><img src="../../assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="../../assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div><p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="../../privacidad.html">Política de privacidad</a></p></footer>
-</body></html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+    <title>Cuidate Online · TEM</title>
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#1D7882">
+    <meta name="description" content="Plan de Formación en Tecnología Móvil para la Ciudad de Justo Daract">
+    <meta name="theme-color" content="#055860">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+    <script defer src="../../assets/js/config.js"></script>
+    <script defer src="../../assets/js/store.js"></script>
+    <script defer src="../../assets/js/menu.js"></script>
+    <script defer src="../../assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="bar-in">
+        <a class="brand" href="../../index.html"><img src="../../assets/img/TEM-logo.png" alt="TEM" width="100" height="34"><span class="brand-t">Plan de Formación en Tecnología Móvil</span></a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
+        <nav id="site-nav" aria-label="Menú principal">
+          <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li class="has-sub">
+              <button type="button" aria-expanded="false" aria-haspopup="true">El plan</button>
+              <div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div>
+            </li>
+            <li class="has-sub" data-here>
+              <button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button>
+              <div class="menu-panel">
+                <a href="../../cursos/index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a><a href="../Herramientas-Digitales/index.html"><b>Herramientas digitales</b><span>Canva, CapCut e IA para vender</span></a>
+                <div class="sub">
+                  <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button>
+                  <div class="sub-list" id="sub-co" hidden><a href="../../cursos/cuidate-online/index.html" aria-current="page"><b>Ver el curso</b><span>Elegir nivel</span></a><a href="../../cursos/cuidate-online/nivel-1.html"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a><a href="../../cursos/cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a><a href="../../cursos/cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a></div>
+                </div>
+              </div>
+            </li>
+            <li><a id="login-link" href="../../ingresar.html">Ingresar</a></li>
+            <li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../index.html">Cursos</a> › <span aria-current="page">Cuidate Online</span></nav>
+      <h1><span aria-hidden="true">🛡️</span> Cuidate Online</h1>
+      <p class="lead">Elegí el nivel que más se parezca a lo que ya hacés con el celular. Podés empezar por el que quieras.</p>
+      <section aria-labelledby="elige-nivel">
+        <h2 id="elige-nivel">¿Cuál es tu nivel?</h2>
+        <div class="tiles stack">
+          <a class="tile" href="nivel-1.html">
+            <span class="ic" aria-hidden="true">📱</span>
+            <div class="tile-copy">
+              <span class="pill ok">Nivel 1</span>
+              <h3>Lo básico</h3>
+              <p>Para vos si sentís: “Casi no uso el celular”.</p>
+              <ul>
+                <li>Abrir aplicaciones, moverte por la pantalla y conectarte a internet.</li>
+                <li>Cuidar tus claves y códigos.</li>
+                <li>Reconocer enlaces y códigos QR que pueden ser engañosos.</li>
+              </ul>
+            </div>
+          </a>
+          <a class="tile" href="nivel-2.html">
+            <span class="ic" aria-hidden="true">🔒</span>
+            <div class="tile-copy">
+              <span class="pill ok">Nivel 2</span>
+              <h3>Intermedio</h3>
+              <p>Para vos si sentís: “Ya uso WhatsApp y el banco”.</p>
+              <ul>
+                <li>Reconocer engaños en mensajes, compras y redes.</li>
+                <li>Proteger WhatsApp y el correo con claves distintas y verificación en dos pasos.</li>
+                <li>Revisar pagos, enlaces y códigos QR antes de actuar.</li>
+              </ul>
+            </div>
+          </a>
+          <a class="tile" href="nivel-3.html">
+            <span class="ic" aria-hidden="true">🔎</span>
+            <div class="tile-copy">
+              <span class="pill ok">Nivel 3</span>
+              <h3>Avanzado</h3>
+              <p>Para vos si sentís: “Quiero verificar páginas”.</p>
+              <ul>
+                <li>Revisar direcciones web antes de poner tus datos.</li>
+                <li>Reconocer páginas, anuncios, correos y aplicaciones falsas.</li>
+                <li>Comprobar pedidos sospechosos antes de responder o compartir información.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="card" aria-labelledby="como-funcionan">
+        <h2 id="como-funcionan">¿Cómo funcionan los niveles?</h2>
+        <p>Podés empezar por el nivel que quieras; no hace falta seguir un orden. Elegí el que más se parezca a lo que ya hacés con el celular.</p>
+        <p>En cada nivel encontrás “Lo importante”, “Estafas que conocer” y una evaluación. Con tu cuenta podés guardar el resultado y volver a verlo en tu perfil.</p>
+        <p>Podés cursar desde el celular y avanzar a tu ritmo.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="logos"><img src="../../assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="../../assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div>
+      <p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="../../privacidad.html">Política de privacidad</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,35 +1,139 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<title>Nivel 1 · Lo básico · TEM</title>
-<link rel="manifest" href="../../manifest.json">
-<meta name="theme-color" content="#1D7882">
-<meta name="description" content="Plan de Formación en Tecnología Móvil para la Ciudad de Justo Daract"><meta name="theme-color" content="#055860"><meta name="color-scheme" content="light dark"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/styles.css">
-<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script defer src="../../assets/js/config.js"></script><script defer src="../../assets/js/store.js"></script><script defer src="../../assets/js/menu.js"></script><script defer src="../../assets/js/app.js"></script>
-</head><body>
-<a class="skip" href="#main">Saltar al contenido</a>
-<header class="site-header"><div class="bar-in"><a class="brand" href="../../index.html"><img src="../../assets/img/TEM-logo.png" alt="TEM" width="100" height="34"><span class="brand-t">Plan de Formación en Tecnología Móvil</span></a>
-<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
-<nav id="site-nav" aria-label="Menú principal"><ul>
-<li><a href="../../index.html">Inicio</a></li>
-<li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">El plan</button><div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div></li>
-<li class="has-sub" data-here><button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button><div class="menu-panel"><a href="../../cursos/index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a><a href="../Herramientas-Digitales/index.html"><b>Herramientas digitales</b><span>Canva, CapCut e IA para vender</span></a><div class="sub"><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button><div class="sub-list" id="sub-co" hidden><a href="../../cursos/cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a><a href="../../cursos/cuidate-online/nivel-1.html" aria-current="page"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a><a href="../../cursos/cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a><a href="../../cursos/cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a></div></div></div></li>
-<li><a id="login-link" href="../../ingresar.html">Ingresar</a></li>
-<li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
-</ul></nav></div></header>
-<main id="main" class="wrap"><nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../../cursos/index.html">Cursos</a> › <a href="../../cursos/cuidate-online/index.html">Cuidate Online</a> › <span aria-current="page">Nivel 1</span></nav>
-<h1>Nivel 1 · Lo básico</h1><p class="lead">Para quien casi no usa el celular</p>
-<div data-tabs><div class="tablist" role="tablist" aria-label="Secciones del nivel">
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+    <title>Nivel 1 · Lo básico · TEM</title>
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#1D7882">
+    <meta name="description" content="Plan de Formación en Tecnología Móvil para la Ciudad de Justo Daract">
+    <meta name="theme-color" content="#055860">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+    <script defer src="../../assets/js/config.js"></script>
+    <script defer src="../../assets/js/store.js"></script>
+    <script defer src="../../assets/js/menu.js"></script>
+    <script defer src="../../assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="bar-in">
+        <a class="brand" href="../../index.html"><img src="../../assets/img/TEM-logo.png" alt="TEM" width="100" height="34"><span class="brand-t">Plan de Formación en Tecnología Móvil</span></a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav">☰ Menú</button>
+        <nav id="site-nav" aria-label="Menú principal">
+          <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li class="has-sub">
+              <button type="button" aria-expanded="false" aria-haspopup="true">El plan</button>
+              <div class="menu-panel"><a href="../../plan/que-es.html"><b>¿Qué es TEM?</b><span>Por qué existe y para quién es</span></a><a href="../../plan/cursada.html"><b>Cómo es la cursada</b><span>Dónde, cuándo y con quién</span></a><a href="../../plan/equipo.html"><b>Quiénes lo hacen</b><span>UNViMe y Municipalidad</span></a></div>
+            </li>
+            <li class="has-sub" data-here>
+              <button type="button" aria-expanded="false" aria-haspopup="true">Cursos</button>
+              <div class="menu-panel">
+                <a href="../../cursos/index.html"><b>Todos los cursos</b><span>Lo que está disponible</span></a><a href="../Herramientas-Digitales/index.html"><b>Herramientas digitales</b><span>Canva, CapCut e IA para vender</span></a>
+                <div class="sub">
+                  <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-co"><b>Cuidate Online</b><span>Cómo evitar estafas</span></button>
+                  <div class="sub-list" id="sub-co" hidden><a href="../../cursos/cuidate-online/index.html"><b>Ver el curso</b><span>Elegir nivel</span></a><a href="../../cursos/cuidate-online/nivel-1.html" aria-current="page"><b>Nivel 1 · Lo básico</b><span>Casi no uso el celular</span></a><a href="../../cursos/cuidate-online/nivel-2.html"><b>Nivel 2 · Intermedio</b><span>Ya uso WhatsApp y el banco</span></a><a href="../../cursos/cuidate-online/nivel-3.html"><b>Nivel 3 · Avanzado</b><span>Quiero verificar páginas</span></a></div>
+                </div>
+              </div>
+            </li>
+            <li><a id="login-link" href="../../ingresar.html">Ingresar</a></li>
+            <li><button class="icon" id="fontbtn" type="button" aria-label="Cambiar tamaño de letra">A+ Letra</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <nav class="crumbs" aria-label="Dónde estás"><a href="../../index.html">Inicio</a> › <a href="../../cursos/index.html">Cursos</a> › <a href="../../cursos/cuidate-online/index.html">Cuidate Online</a> › <span aria-current="page">Nivel 1</span></nav>
+      <h1>Nivel 1 · Lo básico</h1>
+      <p class="lead">Para quien casi no usa el celular</p>
+      <div data-tabs>
+        <div class="tablist" role="tablist" aria-label="Secciones del nivel">
 <button class="tab" role="tab" id="t-importante" aria-controls="p-importante" data-tab="importante" aria-selected="true">Lo importante</button>
 <button class="tab" role="tab" id="t-estafas" aria-controls="p-estafas" data-tab="estafas" aria-selected="false">Estafas que conocer</button>
 <button class="tab" role="tab" id="t-evaluacion" aria-controls="p-evaluacion" data-tab="evaluacion" aria-selected="false">Evaluación</button></div>
-<section id="p-importante" role="tabpanel" aria-labelledby="t-importante" tabindex="0"><div class="hero"><div><p>Tres ideas alcanzan para protegerte de la mayoría de los engaños. Leelas despacio, no hay apuro.</p></div></div><h2>Lo más importante</h2><ul><li>Si alguien te apura, <b>cortá</b>. Las urgencias son casi siempre trampa.</li><li>Nunca digas a nadie tus <b>claves</b>, el número de tu tarjeta ni los <b>códigos</b> que te llegan por mensaje.</li><li>Ante la duda, llamá vos a un familiar de confianza <b>antes</b> de hacer algo.</li></ul><p><button class="btn" type="button" data-goto="evaluacion">Ir a la evaluación →</button></p></section>
-<section id="p-estafas" role="tabpanel" aria-labelledby="t-estafas" tabindex="0" hidden><article class="card"><span class="tag">Llamada falsa</span><h3>“Lo llamamos del banco”</h3><p>Dicen que hubo un movimiento raro en tu cuenta y te piden claves o que pases la plata “a una cuenta segura”.</p><div class="do"><b>Qué hacer:</b> Cortá. El banco nunca te pide claves ni te hace mover dinero. Llamá vos al número de tu tarjeta.</div></article><article class="card"><span class="tag">Familiar en apuros</span><h3>“Abuela, estoy en problemas”</h3><p>Alguien finge ser tu nieto, hijo o abogado, pide plata urgente y que no le cuentes a nadie.</p><div class="do"><b>Qué hacer:</b> Cortá y llamá vos a tu familiar a su número de siempre. Acuerden una <b>palabra secreta</b> en la familia.</div></article><article class="card"><span class="tag">WhatsApp</span><h3>“Te mandé un código por error”</h3><p>Te piden que les reenvíes un código de 6 números. Con eso se quedan con tu WhatsApp.</p><div class="do"><b>Qué hacer:</b> Nunca compartas códigos que te lleguen por mensaje, ni con conocidos.</div></article><article class="card"><span class="tag">Premio falso</span><h3>“¡Ganaste un televisor!”</h3><p>Te mandan un mensaje o llaman para decirte que ganaste algo, pero tenés que pagar o dar datos.</p><div class="do"><b>Qué hacer:</b> Nadie regala premios por mensaje. Borrá el mensaje.</div></article><article class="card"><span class="tag">En la puerta</span><h3>“Soy de la empresa de luz o gas”</h3><p>Una persona llega a tu casa con un chaleco o una credencial y quiere entrar “a revisar”.</p><div class="do"><b>Qué hacer:</b> No lo dejes pasar. Llamá vos a la empresa o a un familiar. Una empresa real avisa antes.</div></article><article class="card"><span class="tag">En el cajero</span><h3>El “amable” que te ayuda</h3><p>Alguien se ofrece a ayudarte en el cajero y se queda con tu tarjeta o mira tu clave.</p><div class="do"><b>Qué hacer:</b> No le des la tarjeta ni la clave a nadie. Si dudás, andá al mostrador del banco.</div></article><article class="card"><span class="tag">Falso reintegro</span><h3>“La jubilación te debe plata”</h3><p>Te llaman diciendo que sos de ANSES o de un ente del Estado y que te corresponde un dinero.</p><div class="do"><b>Qué hacer:</b> Cortá. Los trámites reales no se hacen por teléfono pidiéndote claves ni cuentas.</div></article></section>
-<section id="p-evaluacion" role="tabpanel" aria-labelledby="t-evaluacion" tabindex="0" hidden><div class="quiz" id="quiz" data-level="nivel-1" data-root="../../"></div><script type="application/json" id="quiz-data">[["¿Para qué sirve la pantalla de inicio del celular?", 0, "Desde ahí abrís las aplicaciones y las funciones del celular.", ["Para acceder a aplicaciones y funciones.", "Para cargar la batería.", "Para apagar internet."]], ["¿Qué significa deslizar el dedo por la pantalla?", 0, "Es mover el contenido para desplazarte, por ejemplo hacia abajo en una lista.", ["Mover el contenido para desplazarse.", "Eliminar todas las aplicaciones.", "Apagar el teléfono."]], ["¿Qué permite conectarse a internet?", 0, "El celular se conecta con Wi-Fi o con datos móviles.", ["Wi-Fi o datos móviles.", "La cámara únicamente.", "El volumen del teléfono."]], ["¿Qué es una aplicación?", 0, "Una aplicación (o app) es un programa que sirve para hacer una tarea, como mandar mensajes.", ["Un programa que permite realizar una tarea.", "Un cable para cargar el celular.", "Una parte de la pantalla."]], ["¿Para qué sirve un navegador?", 0, "El navegador te permite visitar páginas web.", ["Para visitar páginas web.", "Para aumentar el volumen.", "Para cargar la batería."]], ["¿Dónde conviene descargar aplicaciones?", 0, "Descargá solo desde la tienda oficial de tu celular. Los enlaces desconocidos pueden traer virus.", ["Desde tiendas oficiales.", "Desde cualquier enlace desconocido.", "Desde mensajes de personas que no conocemos."]], ["¿Qué debemos hacer con nuestra contraseña?", 0, "La contraseña es personal: no se publica ni se manda a nadie.", ["Mantenerla privada y no compartirla.", "Publicarla para no olvidarla.", "Enviar la clave por WhatsApp."]], ["Si recibís un mensaje SOSPECHOSO que pide un código, ¿qué hacés?", 0, "Nunca compartas el código. Verificá por un canal oficial, llamando vos.", ["No lo compartís y verificás por un canal oficial.", "Lo enviás rápidamente.", "Lo reenviás a todos tus contactos."]], ["¿Cómo podemos reconocer un enlace seguro en una página web?", 1, "Los enlaces suelen verse azules y subrayados, y las direcciones seguras empiezan con HTTPS. Igual, fijate también que el sitio sea el oficial.", ["Porque aparece en color rojo.", "Porque suele estar en azul y subrayado, y comienza con HTTPS.", "Porque tiene una fotografía."]], ["¿Qué debemos hacer para escanear un código QR?", 0, "Abrí la cámara del celular y apuntala al código.", ["Abrir la cámara del celular y apuntar al código.", "Sacar una foto a cualquier objeto.", "Apagar y prender el celular."]], ["Te llaman del banco y te piden el código que te llegó por mensaje para “cancelar una compra”.", 1, "El banco nunca pide códigos. Cortá y llamá vos."], ["Tu nieto te escribe de un número nuevo: “Abuela, perdí el celular, mandame plata ya”.", 1, "Es un engaño muy común. Llamá a tu nieto a su número de siempre."], ["Un vecino que conocés de toda la vida te toca timbre y te devuelve una herramienta prestada.", 0, "No pide nada ni te apura. Es normal."], ["Alguien en el cajero se ofrece a ayudarte y te pide la tarjeta.", 1, "Nunca des la tarjeta. Pedí ayuda a un empleado del banco."]]</script>
-<div class="help"><h2 style="margin-top:.8em">Si ya caíste, no te quedes callado</h2><ul><li>Llamá enseguida a tu banco al número oficial y pedí bloquear tarjetas y cuentas.</li><li>Cambiá tus claves desde un dispositivo de confianza.</li><li>Hacé la denuncia y contale a un familiar. Pedir ayuda rápido ayuda mucho.</li></ul></div></section></div>
-<nav class="pager" aria-label="Otros niveles"><a class="btn alt" href="../../cursos/cuidate-online/index.html">← Cuidate Online</a><a class="btn alt" href="../../cursos/cuidate-online/nivel-2.html">Nivel 2</a><a class="btn alt" href="../../cursos/cuidate-online/nivel-3.html">Nivel 3</a></nav>
-</main>
-<footer class="site-footer"><div class="logos"><img src="../../assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="../../assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div><p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="../../privacidad.html">Política de privacidad</a></p></footer>
-</body></html>
+        <section id="p-importante" role="tabpanel" aria-labelledby="t-importante" tabindex="0">
+          <div class="hero">
+            <div>
+              <p>Tres ideas alcanzan para protegerte de la mayoría de los engaños. Leelas despacio, no hay apuro.</p>
+            </div>
+          </div>
+          <h2>Lo más importante</h2>
+          <ul>
+            <li>Si alguien te apura, <b>cortá</b>. Las urgencias son casi siempre trampa.</li>
+            <li>Nunca digas a nadie tus <b>claves</b>, el número de tu tarjeta ni los <b>códigos</b> que te llegan por mensaje.</li>
+            <li>Ante la duda, llamá vos a un familiar de confianza <b>antes</b> de hacer algo.</li>
+          </ul>
+          <p><button class="btn" type="button" data-goto="evaluacion">Ir a la evaluación →</button></p>
+        </section>
+        <section id="p-estafas" role="tabpanel" aria-labelledby="t-estafas" tabindex="0" hidden>
+          <article class="card">
+            <span class="tag">Llamada falsa</span>
+            <h3>“Lo llamamos del banco”</h3>
+            <p>Dicen que hubo un movimiento raro en tu cuenta y te piden claves o que pases la plata “a una cuenta segura”.</p>
+            <div class="do"><b>Qué hacer:</b> Cortá. El banco nunca te pide claves ni te hace mover dinero. Llamá vos al número de tu tarjeta.</div>
+          </article>
+          <article class="card">
+            <span class="tag">Familiar en apuros</span>
+            <h3>“Abuela, estoy en problemas”</h3>
+            <p>Alguien finge ser tu nieto, hijo o abogado, pide plata urgente y que no le cuentes a nadie.</p>
+            <div class="do"><b>Qué hacer:</b> Cortá y llamá vos a tu familiar a su número de siempre. Acuerden una <b>palabra secreta</b> en la familia.</div>
+          </article>
+          <article class="card">
+            <span class="tag">WhatsApp</span>
+            <h3>“Te mandé un código por error”</h3>
+            <p>Te piden que les reenvíes un código de 6 números. Con eso se quedan con tu WhatsApp.</p>
+            <div class="do"><b>Qué hacer:</b> Nunca compartas códigos que te lleguen por mensaje, ni con conocidos.</div>
+          </article>
+          <article class="card">
+            <span class="tag">Premio falso</span>
+            <h3>“¡Ganaste un televisor!”</h3>
+            <p>Te mandan un mensaje o llaman para decirte que ganaste algo, pero tenés que pagar o dar datos.</p>
+            <div class="do"><b>Qué hacer:</b> Nadie regala premios por mensaje. Borrá el mensaje.</div>
+          </article>
+          <article class="card">
+            <span class="tag">En la puerta</span>
+            <h3>“Soy de la empresa de luz o gas”</h3>
+            <p>Una persona llega a tu casa con un chaleco o una credencial y quiere entrar “a revisar”.</p>
+            <div class="do"><b>Qué hacer:</b> No lo dejes pasar. Llamá vos a la empresa o a un familiar. Una empresa real avisa antes.</div>
+          </article>
+          <article class="card">
+            <span class="tag">En el cajero</span>
+            <h3>El “amable” que te ayuda</h3>
+            <p>Alguien se ofrece a ayudarte en el cajero y se queda con tu tarjeta o mira tu clave.</p>
+            <div class="do"><b>Qué hacer:</b> No le des la tarjeta ni la clave a nadie. Si dudás, andá al mostrador del banco.</div>
+          </article>
+          <article class="card">
+            <span class="tag">Falso reintegro</span>
+            <h3>“La jubilación te debe plata”</h3>
+            <p>Te llaman diciendo que sos de ANSES o de un ente del Estado y que te corresponde un dinero.</p>
+            <div class="do"><b>Qué hacer:</b> Cortá. Los trámites reales no se hacen por teléfono pidiéndote claves ni cuentas.</div>
+          </article>
+        </section>
+        <section id="p-evaluacion" role="tabpanel" aria-labelledby="t-evaluacion" tabindex="0" hidden>
+          <div class="quiz" id="quiz" data-level="nivel-1" data-root="../../"></div>
+          <script type="application/json" id="quiz-data">[["¿Para qué sirve la pantalla de inicio del celular?", 0, "Desde ahí abrís las aplicaciones y las funciones del celular.", ["Para acceder a aplicaciones y funciones.", "Para cargar la batería.", "Para apagar internet."]], ["¿Qué significa deslizar el dedo por la pantalla?", 0, "Es mover el contenido para desplazarte, por ejemplo hacia abajo en una lista.", ["Mover el contenido para desplazarse.", "Eliminar todas las aplicaciones.", "Apagar el teléfono."]], ["¿Qué permite conectarse a internet?", 0, "El celular se conecta con Wi-Fi o con datos móviles.", ["Wi-Fi o datos móviles.", "La cámara únicamente.", "El volumen del teléfono."]], ["¿Qué es una aplicación?", 0, "Una aplicación (o app) es un programa que sirve para hacer una tarea, como mandar mensajes.", ["Un programa que permite realizar una tarea.", "Un cable para cargar el celular.", "Una parte de la pantalla."]], ["¿Para qué sirve un navegador?", 0, "El navegador te permite visitar páginas web.", ["Para visitar páginas web.", "Para aumentar el volumen.", "Para cargar la batería."]], ["¿Dónde conviene descargar aplicaciones?", 0, "Descargá solo desde la tienda oficial de tu celular. Los enlaces desconocidos pueden traer virus.", ["Desde tiendas oficiales.", "Desde cualquier enlace desconocido.", "Desde mensajes de personas que no conocemos."]], ["¿Qué debemos hacer con nuestra contraseña?", 0, "La contraseña es personal: no se publica ni se manda a nadie.", ["Mantenerla privada y no compartirla.", "Publicarla para no olvidarla.", "Enviar la clave por WhatsApp."]], ["Si recibís un mensaje SOSPECHOSO que pide un código, ¿qué hacés?", 0, "Nunca compartas el código. Verificá por un canal oficial, llamando vos.", ["No lo compartís y verificás por un canal oficial.", "Lo enviás rápidamente.", "Lo reenviás a todos tus contactos."]], ["¿Cómo podemos reconocer un enlace seguro en una página web?", 1, "Los enlaces suelen verse azules y subrayados, y las direcciones seguras empiezan con HTTPS. Igual, fijate también que el sitio sea el oficial.", ["Porque aparece en color rojo.", "Porque suele estar en azul y subrayado, y comienza con HTTPS.", "Porque tiene una fotografía."]], ["¿Qué debemos hacer para escanear un código QR?", 0, "Abrí la cámara del celular y apuntala al código.", ["Abrir la cámara del celular y apuntar al código.", "Sacar una foto a cualquier objeto.", "Apagar y prender el celular."]], ["Te llaman del banco y te piden el código que te llegó por mensaje para “cancelar una compra”.", 1, "El banco nunca pide códigos. Cortá y llamá vos."], ["Tu nieto te escribe de un número nuevo: “Abuela, perdí el celular, mandame plata ya”.", 1, "Es un engaño muy común. Llamá a tu nieto a su número de siempre."], ["Un vecino que conocés de toda la vida te toca timbre y te devuelve una herramienta prestada.", 0, "No pide nada ni te apura. Es normal."], ["Alguien en el cajero se ofrece a ayudarte y te pide la tarjeta.", 1, "Nunca des la tarjeta. Pedí ayuda a un empleado del banco."]]</script>
+          <div class="help">
+            <h2 style="margin-top:.8em">Si ya caíste, no te quedes callado</h2>
+            <ul>
+              <li>Llamá enseguida a tu banco al número oficial y pedí bloquear tarjetas y cuentas.</li>
+              <li>Cambiá tus claves desde un dispositivo de confianza.</li>
+              <li>Hacé la denuncia y contale a un familiar. Pedir ayuda rápido ayuda mucho.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <nav class="pager" aria-label="Otros niveles"><a class="btn alt" href="../../cursos/cuidate-online/index.html">← Cuidate Online</a><a class="btn alt" href="../../cursos/cuidate-online/nivel-2.html">Nivel 2</a><a class="btn alt" href="../../cursos/cuidate-online/nivel-3.html">Nivel 3</a></nav>
+    </main>
+    <footer class="site-footer">
+      <div class="logos"><img src="../../assets/img/Logo-a-color.png" alt="Universidad Nacional de Villa Mercedes (UNViMe)" width="112" height="100"><img src="../../assets/img/escudo actos.svg" alt="Justo Daract – Intendencia Municipal" width="100" height="100"></div>
+      <p>Plan de Formación en Tecnología Móvil (TEM) · Ciudad de Justo Daract · <a href="../../privacidad.html">Política de privacidad</a></p>
+    </footer>
+  </body>
+</html>
