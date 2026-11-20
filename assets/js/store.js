@@ -1,8 +1,10 @@
 (function(){
 var S=window.TEM={},C=window.TEM_CFG||{};
-S.LEVELS={"nivel-1":"Nivel 1","nivel-2":"Nivel 2","nivel-3":"Nivel 3"};
+S.LEVELS={"nivel-1":"Nivel 1","nivel-2":"Nivel 2","nivel-3":"Nivel 3","herramientas-clase-1":"Herramientas · Clase 1","herramientas-clase-2":"Herramientas · Clase 2"};
 S.esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});};
 S.abbr=function(n){var p=String(n).trim().split(/\s+/);return p.length>1?p[0]+" "+p[p.length-1].charAt(0).toUpperCase()+".":p[0];};
+S.get=function(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v);}catch(e){return d;}};
+S.set=function(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
 S.recovery=/[#&]type=recovery/.test(location.hash);
 S.ready=!!(C.SUPABASE_URL&&C.SUPABASE_ANON_KEY&&window.supabase);
 var sb=S.ready?window.supabase.createClient(C.SUPABASE_URL,C.SUPABASE_ANON_KEY):null;

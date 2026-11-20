@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tem-cache-v3';
+const CACHE_NAME = 'tem-cache-v4';
 
 const ASSETS = [
   './',
